@@ -4,7 +4,7 @@ body{
 #nav{
     display:flex;
     justify-content:space-around;
-    height:80px;
+    height:100px;
     align-items:center;
 }
 #nav>div:nth-child(2){
@@ -23,16 +23,22 @@ body{
     color:grey
 }
 #nav img{
-    width:200px;
-    height:30px;
+    width:80px;
+    height:80px;
+}
+#nav+div li{
+    padding:13px 18px;
+    text-align:center;
+    cursor:pointer;
+    
 }
 #nav+div{
       display:flex;
-      height:50px;
+      height:42px;
       align-items:center;
       list-style:none;
-      gap:30px;
-      padding-left:300px;
+      
+      padding-left:20%;
       background-color:#0066EE;
       color:#ffffff;
       font-family:Inter,Helvetica,Arial,-apple-system ;
@@ -41,7 +47,7 @@ body{
 }
 #nav+div li:hover{
     background-color:#005977;
-    height:50px;
+    padding:14px 18px;
     text-align:center;
     cursor:pointer;
 }
@@ -160,6 +166,9 @@ span:hover{
 }
 select{
     width:100px;
+}
+a{
+    text-decoration-line: none;
 }
 
 
