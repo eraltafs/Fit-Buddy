@@ -1,0 +1,38 @@
+#welcome{
+    width:27%;
+    margin:auto;
+    margin-top:40px;
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border-radius:15px;
+    height:430PX;;
+    padding:30px;
+    padding:7% 3%;
+    
+}
+h1{
+    width:85%;
+    text-align:center;
+    margin:auto;
+    margin-top:100px;
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    font-size:24.3px;
+    font-weight:bold;
+}
+button{
+    width:88%;
+    height:48px;
+    border-radius:4px;
+    background-color:#0066EE;
+   color: aliceblue;
+    border:0px;
+    margin-left:30px;
+    cursor: pointer;
+    font-size:15px;
+    margin-top:20px;
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+      font-weight:bold;
+}
+button:hover{
+    background-color:#0046a1;
+}
