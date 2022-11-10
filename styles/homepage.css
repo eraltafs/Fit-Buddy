@@ -1,6 +1,11 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
 #navtop {
 	display: flex;
-	height: 70px;
+	height: 110px;
 	border: 1px solid red;
 	width: 70%;
 	margin: auto;
@@ -9,17 +14,22 @@
 }
 #topleft {
 	width: 20%;
-	border: 1px solid blue;
+	
+	/* border: 1px solid blue; */
 }
 #topleft img {
-	width: 100%;
+	width: 80px;
+	height: 80px;
 	padding: 10px;
+	border: 1px solid;
 }
 #topright {
 	width: 70%;
+	height: 100px;
 	display: flex;
 	border: 1px solid green;
 	justify-content: space-evenly;
+	align-items: center;
 }
 #topright p {
 	font-size: 14px;
@@ -43,43 +53,47 @@
 	color: blue;
 }
 #navmiddle {
+	margin-top: 10px;
 	width: 100%;
 	background-color: #0066ee;
-	height: 20px;
-	padding: 10px;
+	height: 40px;
 }
 #navmiddle div {
-	width: 70%;
-	margin: auto;
+	
+	display: flex;
+	margin-left: 14%;
+
 }
 #navmiddle > div a {
 	color: white;
-	margin-right: 10px;
 	font-size: 15px;
 	font-weight: bold;
-	padding: 10px;
-	height: 50px;
+	padding: 12px 18px;
+	text-decoration: none;
 }
 #navmiddle > div a:hover {
 	background-color: #00548b;
+	height: 20px;
+	padding: 12px 18px;
 }
 #navbottom {
+	
 	width: 100%;
 	background-color: #00548b;
-	height: 20px;
-	padding: 10px;
-	display: flex;
+
+	height: 40px;
 }
 #navbottom > div {
-	width: 70%;
-	margin: auto;
-	border: 1px solid red;
 	display: flex;
-	justify-content: space-between;
-	margin-top: -10px;
+	margin-left: 14%;
+	
 }
-#navbottom div p {
+#navbottom div a {
 	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 12px 18px;
+	text-decoration: none;
 }
 #mainbody {
 	width: 70%;
