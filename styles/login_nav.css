@@ -8,6 +8,9 @@ body{
     align-items:center;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
+#nav img{
+    cursor: pointer;
+}
 #nav>div:nth-child(2){
     display:flex;
     list-style:none;
