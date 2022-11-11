@@ -247,3 +247,74 @@ border: 0px solid red;
     font-size: 13px;
     line-height: 18px;
 }
+
+
+/* footer css added */
+#MainContainer {
+    display: flex;
+    width: 100%;
+    background-color: #f6f6f8;
+    padding: 15px;
+
+}
+
+#leftContainer {
+    flex: 75%;
+
+}
+
+#rightContainer {
+    flex: 25%;
+
+}
+
+#rightContainer>select {
+    margin-left: 50%;
+
+}
+
+#line1 {
+    display: flex;
+    margin-left: 30%;
+    justify-content: space-between;
+
+}
+
+#line1>div {
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+#line2 {
+    display: flex;
+    margin-left: 40%;
+    margin-right: 10%;
+    margin-top: 2%;
+    justify-content: space-between;
+
+}
+
+#line2>div,
+#line3>div {
+    font-weight: lighter;
+    font-size: 11px;
+    color: blueviolet;
+    cursor: pointer;
+}
+
+#line3 {
+    display: flex;
+    margin-left: 50%;
+    margin-right: 20%;
+    margin-top: 1%;
+    justify-content: space-around;
+
+}
+
+#copyright {
+    margin-left: 60%;
+    margin-right: 28%;
+    margin-top: 2%;
+    font-size: 11px;
+}
