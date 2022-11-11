@@ -31,14 +31,15 @@ body{
     height:80px;
 }
 #nav+div li{
-    padding:13px 18px;
+   
+    padding: 12px 18px;
     text-align:center;
     cursor:pointer;
     
 }
 #nav+div{
       display:flex;
-      height:42px;
+      height:43px;
       align-items:center;
       list-style:none;
       
