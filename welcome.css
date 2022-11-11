@@ -1,26 +1,3 @@
-
-#nav{
-    display:flex;
-    justify-content:space-around;
-    height:100px;
-    align-items:center;
-}
-#nav img{
-    cursor: pointer;
-}
-#nav img{
-    width:80px;
-    height:80px;
-}
-#nav>div:nth-child(2){
-    display:flex;
-    list-style:none;
-    gap:10px;
-}
-#nav>div:nth-child(2) a{
-    text-decoration: none;
-    /* list-style: none; */
-}
 #welcome{
     width:27%;
     margin:auto;
