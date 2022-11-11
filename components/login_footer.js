@@ -111,7 +111,7 @@ function footer(){
     <option value="zu">Zulu - isiZulu</option>
 </select>
 </p>
-<p>© 2022 MyFitnessPal, Inc.</p>`
+<p>© 2022 Fit Buddies, Inc.</p>`
 }
 
-export default footer
+export  {footer}

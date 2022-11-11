@@ -4,8 +4,11 @@ body{
 #nav{
     display:flex;
     justify-content:space-around;
-    height:80px;
+    height:100px;
     align-items:center;
+}
+#nav img{
+    cursor: pointer;
 }
 #nav>div:nth-child(2){
     display:flex;
@@ -23,16 +26,22 @@ body{
     color:grey
 }
 #nav img{
-    width:200px;
-    height:30px;
+    width:80px;
+    height:80px;
+}
+#nav+div li{
+    padding:13px 18px;
+    text-align:center;
+    cursor:pointer;
+    
 }
 #nav+div{
       display:flex;
-      height:50px;
+      height:42px;
       align-items:center;
       list-style:none;
-      gap:30px;
-      padding-left:300px;
+      
+      padding-left:20%;
       background-color:#0066EE;
       color:#ffffff;
       font-family:Inter,Helvetica,Arial,-apple-system ;
@@ -41,7 +50,7 @@ body{
 }
 #nav+div li:hover{
     background-color:#005977;
-    height:50px;
+    padding:14px 18px;
     text-align:center;
     cursor:pointer;
 }
@@ -57,7 +66,7 @@ h1{
     margin:auto;
     margin-top:40px;
     font-family:Inter,Helvetica,Arial,-apple-system ;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius:15px;
     height:420px;
     padding:30px;
@@ -160,6 +169,9 @@ span:hover{
 }
 select{
     width:100px;
+}
+a{
+    text-decoration-line: none;
 }
 
 
