@@ -44,6 +44,9 @@ h2{
     margin-bottom:50px;
     font-size:20px;
 }
+p{
+    text-align:center;
+}
 #weight>button{
     width:88%;
     height:56px;
@@ -80,13 +83,13 @@ h2{
     font-family:Inter,Helvetica,Arial,-apple-system ;
     font-weight:bold;
 }
-#back a:nth-child(2) button{
+#back>button{
     margin-left:15px;
     background-color:#0066EE;
     color:white;
     font-weight:bold;
 }
-#back a:nth-child(2):hover button{
+#back>button:hover{
     background-color:#0046a1;
 }
 #back a:nth-child(1) button{
