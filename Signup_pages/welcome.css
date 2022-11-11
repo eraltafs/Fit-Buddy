@@ -1,3 +1,26 @@
+
+#nav{
+    display:flex;
+    justify-content:space-around;
+    height:100px;
+    align-items:center;
+}
+#nav img{
+    cursor: pointer;
+}
+#nav img{
+    width:80px;
+    height:80px;
+}
+#nav>div:nth-child(2){
+    display:flex;
+    list-style:none;
+    gap:10px;
+}
+#nav>div:nth-child(2) a{
+    text-decoration: none;
+    /* list-style: none; */
+}
 #welcome{
     width:27%;
     margin:auto;
@@ -35,4 +58,36 @@ button{
 }
 button:hover{
     background-color:#0046a1;
+}
+
+
+#footer{
+    width:100%;
+    height: 100px;
+    background-color:rgb(236, 235, 235);
+    margin-top:30px;
+    align-items:center;
+   padding-top:20px;
+}
+#footer>p{
+    text-align:center;
+    font-size:12px;
+    color:#0066EE;
+    padding:8px
+}
+#footer p:nth-child(2){
+    color:#000000DE;
+    font-size:11px;
+}
+p>span{
+    padding:10px;
+}
+span:hover{
+    cursor:pointer;
+}
+select{
+    width:100px;
+}
+a{
+    text-decoration-line: none;
 }
