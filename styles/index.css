@@ -140,12 +140,16 @@ width: 90%;
 #victory>p{
     line-height: 22px;
 }
-#slideshow{
+#slideshow_div{
     width: 60%;
     margin: auto;
     height: 500px;
     border: 1px solid red;
     margin-top: 8%;
+}
+#slideshow_div>img{
+    height: 100%;
+    width: 50%;
 }
 
 #startbutton{
