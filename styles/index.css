@@ -60,7 +60,10 @@ height: 100%;
     border-radius: 5px;
     font-weight: bold;
 }
-
+#goodhealth>#leftgoodhealth>button>a{
+    text-decoration: none;
+    color: white;
+}
 
 
 
@@ -140,17 +143,20 @@ width: 90%;
 #victory>p{
     line-height: 22px;
 }
-#slideshow_div{
+#slideshow{
     width: 60%;
     margin: auto;
     height: 500px;
     border: 1px solid red;
     margin-top: 8%;
+    display: flex;
 }
+
 #slideshow_div>img{
     height: 100%;
-    width: 50%;
+    width: 70%;
 }
+
 
 #startbutton{
     border: 0px;
@@ -161,9 +167,22 @@ width: 90%;
     height: 50px;
     border-radius: 5px;
     font-weight: bold;
-margin-left: 35%;
+    margin-left: 35%;
     margin-top: 5%;
 }
+#startbutton>button:hover{
+    cursor: pointer;
+    background-color: #042cdf;
+}
+#startbutton>a{
+    text-decoration: none;
+    color: white;
+}
+#startbutton>a:hover{
+    cursor: pointer;
+    background-color: #042cdf;
+}
+
 #recipes{
     height: 100px;
     width: 60%;
