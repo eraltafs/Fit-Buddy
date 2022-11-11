@@ -7,6 +7,9 @@ body{
     height:100px;
     align-items:center;
 }
+#nav img{
+    cursor: pointer;
+}
 #nav>div:nth-child(2){
     display:flex;
     list-style:none;
