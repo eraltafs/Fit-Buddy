@@ -135,7 +135,17 @@ body{
   height: 100%;
   width: 70%;
 }
+.swiper{
+  width: 750px;
+  height: 300px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper .swiper-wrapper{
 
+}
 #startbutton {
   border: 0px;
   background-color: #0066ee;
