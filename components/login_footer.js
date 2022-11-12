@@ -114,4 +114,4 @@ function footer(){
 <p>© 2022 Fit Buddies, Inc.</p>`
 }
 
-export default footer
+export  {footer}

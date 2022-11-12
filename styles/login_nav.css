@@ -6,6 +6,10 @@ body{
     justify-content:space-around;
     height:100px;
     align-items:center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+#nav img{
+    cursor: pointer;
 }
 #nav>div:nth-child(2){
     display:flex;
@@ -27,14 +31,15 @@ body{
     height:80px;
 }
 #nav+div li{
-    padding:13px 18px;
+   
+    padding: 12px 18px;
     text-align:center;
     cursor:pointer;
     
 }
 #nav+div{
       display:flex;
-      height:42px;
+      height:43px;
       align-items:center;
       list-style:none;
       
