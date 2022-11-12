@@ -41,6 +41,9 @@ body{
 #activity p{
     color:#00000099;
 }
+#div1{
+    border:
+}
 h3{
     color:#0e0c0cd3;
 }
@@ -57,13 +60,24 @@ h2{
    height: 90px;
     gap:10px;
     margin-top:9px;
+    cursor:pointer;
     padding-left:3%;
     padding-right:3%;
     border-radius:4px;
     border:solid 2px rgb(192, 184, 184);
 }
-#activity>div:hover{
-    border-color:rgb(115, 112, 112);
+
+#div1:hover{
+    border:rgb(115, 112, 112) solid 2px;
+}
+#div2:hover{
+    border:rgb(115, 112, 112) solid 2px;
+}
+#div3:hover{
+    border:rgb(115, 112, 112) solid 2px;
+}
+#div4:hover{
+    border:rgb(115, 112, 112) solid 2px;
 }
 #activity>div:nth-child(1){
     margin-top:40px;
@@ -80,7 +94,7 @@ h2+p{
 }
 #back{
     display:flex;
-    margin-top:30px;
+    margin-top:40px;
     width:100%;
 }
 #back button{
