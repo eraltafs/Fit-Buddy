@@ -5,26 +5,23 @@ body {
 
 #navtop {
 	display: flex;
-	height: 110px;
-	/* border: 1px solid red; */
+	height: 80px;
 	width: 70%;
 	margin: auto;
 	justify-content: space-between;
 	padding: 10px 10px 0px 10px;
 }
 #topleft {
-	width: 20%;
-
-	/* border: 1px solid blue; */
+	width: 50%;
+	
 }
 #topleft img {
 	width: 40%;
 }
 #topright {
 	width: 70%;
-	height: 100px;
 	display: flex;
-	/* border: 1px solid green; */
+	
 	justify-content: space-evenly;
 	align-items: center;
 }

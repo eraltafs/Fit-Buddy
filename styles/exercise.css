@@ -1,35 +1,29 @@
 body {
-  margin: 0px;
-  padding: 0px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+	margin: 0px;
+	padding: 0px;
 }
 
 #navtop {
-  display: flex;
-  height: 110px;
-  /* border: 1px solid red; */
-  width: 70%;
-  margin: auto;
-  justify-content: space-between;
-  padding: 10px 10px 0px 10px;
+	display: flex;
+	height: 80px;
+	width: 70%;
+	margin: auto;
+	justify-content: space-between;
+	padding: 10px 10px 0px 10px;
 }
 #topleft {
-  width: 20%;
-
-  /* border: 1px solid blue; */
+	width: 50%;
+	
 }
 #topleft img {
-  width: 40%;
+	width: 40%;
 }
 #topright {
-  width: 70%;
-  height: 100px;
-  display: flex;
-  /* border: 1px solid green; */
-  justify-content: space-evenly;
-  align-items: center;
+	width: 70%;
+	display: flex;
+
+	justify-content: space-evenly;
+	align-items: center;
 }
 #topright p {
   font-size: 14px;
