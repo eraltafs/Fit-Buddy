@@ -95,3 +95,147 @@
     border-radius: 5px;
     font-size: 16px;
 }
+
+#text>button:hover {
+    background-color: #1562c7;
+    cursor: pointer;
+}
+
+#noteCards {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+}
+
+#noteCards>div>p {
+    font-size: 18px;
+    color: #8a8e96;
+}
+
+#noteCards>div>h2 {
+    font-size: 22px;
+    margin-top: 0%;
+}
+
+#benifitsCards {
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#benifitsCards>:nth-child(2) {
+    text-align: center;
+    flex: 60%;
+
+    height: 200px;
+}
+
+#benifitsCards>:nth-child(2)>p {
+    color: #8a8e96;
+    font-size: 18px;
+}
+
+#benifitsCards>:nth-child(3)>img {
+    width: 100%;
+
+}
+
+#benifitsCards>:nth-child(3)>div {
+
+    margin-left: 45%;
+    width: 50%;
+}
+
+#premiumAdv {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 250px;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+#premiumAdv>div {
+    display: flex;
+    justify-content: space-between;
+    width: 92.5%;
+    height: 100px;
+    border-top: 1px solid rgb(107, 130, 155);
+    padding: 0px 30px 0px 30px;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#premiumAdv>div>div>p {
+    color: #8a8e96;
+}
+
+#premiumAdv>div>div>img {
+    margin-top: 40px;
+}
+
+#premiumAdv>:nth-child(1)>div>img {
+    margin-left: 90px;
+}
+
+#premiumAdv>:nth-child(1),
+#premiumAdv>:nth-child(3),
+#premiumAdv>:nth-child(5),
+#premiumAdv>:nth-child(7),
+#premiumAdv>:nth-child(9) {
+    background-color: white;
+}
+
+#premiumAdv>:nth-child(2),
+#premiumAdv>:nth-child(4),
+#premiumAdv>:nth-child(6),
+#premiumAdv>:nth-child(8),
+#premiumAdv>:nth-child(10) {
+    background-color: #f6f6f8;
+}
+
+.freePre {
+    display: flex;
+    justify-content: flex-end;
+    gap: 60px;
+    margin-right: -120px;
+}
+
+.victoryStories {
+    margin: auto;
+    width: 50%;
+    margin-top: 450px;
+    text-align: center;
+}
+
+.victoryStories>p {
+    color: #8a8e96;
+    font-size: 18px;
+}
+
+.victoryCardsContainer {
+    display: flex;
+    gap: 15%;
+}
+
+#victoryCards {
+    width: 40%;
+    height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-left: 30%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+
+.carousel-item {
+    text-align: center;
+    margin: auto;
+}
+
+.carousel-item>p {
+    color: #8a8e96;
+    width: 90%;
+    margin: auto;
+}
