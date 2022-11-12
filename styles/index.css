@@ -1,6 +1,6 @@
-body{
-    margin: 0px;
-    padding: 0px;
+body {
+  margin: 0px;
+  padding: 0px;
 }
 * {
   font-family: Arial, Helvetica, sans-serif;
@@ -13,12 +13,10 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 #navbar img {
   width: 40%;
-  
 }
 #goodhealth {
   width: 70%;
@@ -115,6 +113,7 @@ body{
   margin: auto;
   height: 70px;
   margin-top: 5%;
+  margin-bottom: 10%;
 }
 #victory > h1 {
   font-size: 50px;
@@ -122,30 +121,37 @@ body{
 #victory > p {
   line-height: 22px;
 }
-#slideshow {
-  width: 60%;
-  margin: auto;
+.swiper {
+  width: 950px;
   height: 500px;
-  border: 1px solid red;
-  margin-top: 8%;
+  /* border: 1px solid green; */
+}
+.swiper-wrapper{
+  padding:0px 50px;
+  
+}
+.flexxxer{
+  
   display: flex;
+  margin: auto;
+  
+}
+.flexxxer>div{
+  
+  border: 1px solid green;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 43%;
+}
+.flexxxer>div img{
+  width: 100%;
+}
+q+p{
+  margin-left: 70%;
+  
 }
 
-#slideshow_div > img {
-  height: 100%;
-  width: 70%;
-}
-.swiper{
-  width: 750px;
-  height: 300px;
-  background-color: #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.swiper .swiper-wrapper{
-
-}
 #startbutton {
   border: 0px;
   background-color: #0066ee;
