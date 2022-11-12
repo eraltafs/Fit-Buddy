@@ -1,25 +1,33 @@
-
+body{
+    margin:0
+}
 #nav{
     display:flex;
     justify-content:space-around;
     height:100px;
     align-items:center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;   
 }
-#nav img{
-    cursor: pointer;
-}
-#nav img{
-    width:80px;
-    height:80px;
+#nav a{
+    text-decoration-line: none;
 }
 #nav>div:nth-child(2){
     display:flex;
     list-style:none;
-    gap:10px;
+    gap:10px;   
 }
-#nav>div:nth-child(2) a{
-    text-decoration: none;
-    /* list-style: none; */
+#nav li{
+    color:#0066EE;
+    cursor:pointer;
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    font-size:18.4px; 
+}
+#nav span{
+    color:grey
+}
+#nav img{
+    width:80px;
+    height:80px;
 }
 #welcome{
     width:27%;
