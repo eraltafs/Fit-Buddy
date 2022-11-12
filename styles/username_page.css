@@ -1,0 +1,154 @@
+body{
+    margin:0
+}
+#nav{
+    display:flex;
+    justify-content:space-around;
+    height:100px;
+    align-items:center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;   
+}
+#nav a{
+    text-decoration-line: none;
+}
+#nav>div:nth-child(2){
+    display:flex;
+    list-style:none;
+    gap:10px;   
+}
+#nav li{
+    color:#0066EE;
+    cursor:pointer;
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    font-size:18.4px; 
+}
+#nav span{
+    color:grey
+}
+#nav img{
+    width:40%;
+}
+#username{
+    width:28%;
+    margin:auto;
+    margin-top:40px;
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border-radius:15px;
+    height:660px;
+    padding:40px 40px;
+    padding-left:2.5%;
+}
+h1{
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    color:#000000DE;
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+}
+#username>div:nth-child(1){
+    text-align:center;
+
+}
+#username input{
+    padding:4% 2%;
+    width:85%;
+    margin-top:10px;
+    border-radius:5px;
+    cursor: pointer;
+    font-size:17px;
+    border:solid 1px rgb(212, 196, 196);   
+}
+#username input:hover{
+    border:1px solid rgb(115, 112, 112)
+}
+input+p{
+    color:#00000099;
+    margin-top:9px; 
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    font-size:14px;
+    text-align:left;
+    padding-left:6%;
+}
+#check{
+    display:flex;
+    padding-left:10%;
+    gap:15px;
+    cursor: pointer;
+}
+#check h2{
+    color:#000000DE;
+    font-size:16px;
+}
+#check1{
+    width:35px;
+    height:35px;
+    color: #00Bf6f;
+}
+#check p{
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    margin-top:-10px;
+    color:#00000099;
+    line-height:25px;
+}
+span{
+    color:#0066EE;
+    cursor: pointer;
+}
+#check+p{
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    color:#00000099;
+    text-align:center;
+    margin-top:80px;
+    padding-left:4%;
+    width:95%;
+    font-size:14px;
+
+}
+#continue{
+    margin-top:-20px;
+}
+#continue img{
+    width:380px;
+    height:50px;
+    margin-left:30px;
+}
+#continue h3{
+    text-align:center;
+    font-size:16px;
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    
+ }
+ 
+#continue button{
+    width:88%;
+    height:48px;
+    border-radius:4px;
+    background-color:#0066EE;
+    color:white;
+    border:0px;
+    margin-left:30px;
+    cursor: pointer;
+    font-size:15px;
+    margin-top:20px;
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+      font-weight:bold;
+      margin-bottom:-8px;
+}
+
+ #continue button:hover{
+    background-color:#0046a1;
+}
+#continue~p{
+    text-align:center;
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    color:#00000099;
+    padding-left:4%;
+    width:95%;
+    font-size:14px;
+   
+}
+#username>p:last-child{
+    font-size:12px;
+}
+
