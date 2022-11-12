@@ -230,6 +230,34 @@ body {
 	margin-top: 5px;
 	margin-right: 10px;
 }
+#slider {
+	position: relative;
+	cursor: pointer;
+}
+#tooltiptext {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	background-color: #85c400;
+	color: white;
+	padding: 10px 15px;
+	border-radius: 7px;
+	visibility: hidden;
+}
+#slider:hover #tooltiptext {
+	top: -130%;
+	visibility: visible;
+}
+#tooltiptext::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 100%;
+	transform: translateX(-50%);
+	border: 15px solid;
+	border-color: #85c400;
+}
 #slider hr {
 	margin-top: 20px;
 	height: 15px;
@@ -237,9 +265,6 @@ body {
 	color: grey;
 	background-color: #e6e6e6;
 	margin-left: -5px;
-}
-#slider hr:hover {
-	background-color: #85c400;
 }
 #pointer svg {
 	color: #85c400;
