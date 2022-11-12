@@ -133,7 +133,23 @@ table thead tr td:first-child {
   padding-left: 0px;
   color: #00548b;
 }
-
+#exercisebody{
+  text-align: center;
+}
+#exercisebody tr>td:first-child{
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+}
+#exercisebody tr:nth-child(odd){
+  background-color: #637fa3;
+}
+#exercisebody tr:nth-child(even){
+  background-color: #b2cef1;
+}
+#exercisebody tr{
+  text-transform: uppercase;
+}
 .goal {
   color: #00548b;
 }

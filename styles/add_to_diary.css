@@ -1,29 +1,28 @@
 body {
-	margin: 0px;
-	padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 #navtop {
-	display: flex;
-	height: 80px;
-	width: 70%;
-	margin: auto;
-	justify-content: space-between;
-	padding: 10px 10px 0px 10px;
+  display: flex;
+  height: 80px;
+  width: 70%;
+  margin: auto;
+  justify-content: space-between;
+  padding: 10px 10px 0px 10px;
 }
 #topleft {
-	width: 50%;
-	
+  width: 50%;
 }
 #topleft img {
-	width: 40%;
+  width: 40%;
 }
 #topright {
-	width: 70%;
-	display: flex;
-	
-	justify-content: space-evenly;
-	align-items: center;
+  width: 70%;
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: center;
 }
 #topright p {
   font-size: 14px;
@@ -104,6 +103,62 @@ button {
 }
 button:hover {
   background-color: rgb(64, 144, 64);
+}
+
+
+#exer{
+
+  display: none;
+}
+
+#flexer{
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+#matchresults {
+  width: 60%;
+  height: 200px;
+  border: 1px solid gray;
+}
+#matchresults > p {
+  margin: 1px;
+}
+#matchresults > p:nth-child(even) {
+  background-color: rgb(206, 206, 206);
+}
+#matchresults > p:hover {
+  background-color: rgb(117, 117, 117);
+}
+#adder{
+  border: 1px solid green;
+  width: 37%;
+}
+#adder{
+  text-align: center;
+  display: none;
+}
+#adder h3{
+
+  margin-bottom: 4px;
+}
+h3+p{
+  margin-top: 0px;
+  margin-bottom: 8px;
+  color: red;
+  font-weight: bold;
+}
+input+p{
+  font-size: 10px;
+}
+p+button{
+  display: flex;
+  margin-left: 50px;
+}
+#adder input{
+  border: 1px solid green;
+  width: 40px;
 }
 #footer {
   width: 100%;
