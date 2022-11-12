@@ -25,6 +25,15 @@ async function fetching(){
     let res = await fetch(`http://localhost:3000/done`)
     data = await res.json()
     Append(data)
+    let totalminute = 0
+    let totalcalories = 0
+    data.forEach(({calories,minute})=>{
+        totalminute+=Number(minute)
+        totalcalories+=Number(calories)
+    })
+    console.log(totalminute,totalcalories)
+    document.getElementById("totminute").textContent = `${totalminute}`||"0"
+    document.getElementById("totcalories").textContent = `${totalcalories}`||"0"
 }
 fetching()
 let body = document.getElementById("exercisebody")

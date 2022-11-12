@@ -39,16 +39,10 @@
   ],
   "done": [
     {
-      "title": "push ups",
+      "title": "pull ups",
       "calories": "46",
       "minute": "5",
       "id": 1
-    },
-    {
-      "title": "jumping-jack",
-      "calories": "36",
-      "minute": "4",
-      "id": 3
     }
   ]
 }
