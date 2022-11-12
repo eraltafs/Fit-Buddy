@@ -7,7 +7,9 @@ import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.brow
 
 const swiper = new Swiper(".swiper", {
   // Optional parameters
-  
+  autoplay: {
+    delay: 2000,
+  },
   loop:true,
 
   // If we need pagination
