@@ -1,3 +1,34 @@
+body{
+    margin:0
+}
+#nav{
+    display:flex;
+    justify-content:space-around;
+    height:100px;
+    align-items:center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+#nav a{
+    text-decoration-line: none;
+}
+#nav>div:nth-child(2){
+    display:flex;
+    list-style:none;
+    gap:10px;   
+}
+#nav li{
+    color:#0066EE;
+    cursor:pointer;
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    font-size:18.4px;    
+}
+#nav span{
+    color:grey
+}
+#nav img{
+    width:80px;
+    height:80px;
+}
 #weight{
     width:28%;
     margin:auto;
@@ -13,6 +44,9 @@ h2{
     margin-bottom:50px;
     font-size:20px;
 }
+p{
+    text-align:center;
+}
 #weight>button{
     width:88%;
     height:56px;
@@ -25,7 +59,7 @@ h2{
     font-size:16px;
     margin-top:5px;
     font-family:Inter,Helvetica,Arial,-apple-system ;
-      font-weight:bold;
+    font-weight:bold;
 }
 #weight>button:hover{
  border-color:rgb(115, 112, 112)
@@ -47,15 +81,15 @@ h2{
     cursor: pointer;
     font-size:16px;
     font-family:Inter,Helvetica,Arial,-apple-system ;
-      font-weight:bold;
+    font-weight:bold;
 }
-#back a:nth-child(2) button{
+#back>button{
     margin-left:15px;
     background-color:#0066EE;
     color:white;
     font-weight:bold;
 }
-#back a:nth-child(2):hover button{
+#back>button:hover{
     background-color:#0046a1;
 }
 #back a:nth-child(1) button{
