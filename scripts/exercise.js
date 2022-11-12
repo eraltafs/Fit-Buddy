@@ -17,3 +17,35 @@ let monthn = monthNames[today.getMonth()]
 let date = `${dayn}, ${monthn} ${dd}, ${yyyy}`
 
 let datefield = document.getElementById("date").textContent = date
+
+
+
+
+async function fetching(){
+    let res = await fetch(`http://localhost:3000/done`)
+    data = await res.json()
+    Append(data)
+}
+fetching()
+let body = document.getElementById("exercisebody")
+function Append(data){
+    data.forEach(({id, calories,title,minute})=>{
+        let tr = document.createElement("tr")
+        let td1 = document.createElement("td")
+        td1.textContent = title
+        let td2 = document.createElement("td")
+        td2.textContent = minute
+        let td3 = document.createElement("td")
+        td3.textContent = calories
+
+        let td4 = document.createElement("td")
+        td4.innerHTML = `<i class="fa-solid fa-circle-minus"></i>`
+        td4.style.color = "red"
+        td4.style.cursor = "pointer"
+        td4.onclick = async()=>{
+            let res = await fetch( `http://localhost:3000/done/${id}`,{method:"DELETE"})
+        }
+        tr.append(td1,td2,td3,td4)
+        body.append(tr)
+    })
+}
