@@ -1,0 +1,97 @@
+#topDiv {
+    display: flex;
+    width: 100%;
+}
+
+#topDiv>:nth-child(1) {
+
+    width: 20%;
+}
+
+#topDiv>:nth-child(2) {
+
+    width: 32%;
+    margin-left: 2%;
+}
+
+#topDiv>:nth-child(3) {
+
+    width: 40%;
+}
+
+#topDiv>:nth-child(4) {
+
+    width: 33%;
+}
+
+#topDiv>:nth-child(3)>img {
+    width: 95%;
+    margin-left: 27%;
+    margin-top: 5%;
+}
+
+#topDiv>:nth-child(4)>img {
+    width: 90%;
+}
+
+.dotsBox {
+    display: flex;
+    row-gap: 10px;
+}
+
+.larzeDots,
+.smallDots {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 350px;
+
+}
+
+.larzeDots>div {
+    margin-top: 23px;
+    margin-left: 25px;
+    width: 8px;
+    height: 8px;
+    border-radius: 60%;
+    background-color: #dee1e7;
+}
+
+.smallDots>div {
+    margin-top: 26px;
+    margin-left: 25px;
+    width: 5px;
+    height: 5px;
+    border-radius: 60%;
+    background-color: #9ca2af;
+}
+
+#text>h5 {
+    padding: 5px;
+    background-color: #fdda1c;
+    display: inline-flex;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+#text>h1 {
+    font-weight: 900;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 100%;
+}
+
+#text>p {
+    color: #b6b6b8;
+}
+
+#text>button {
+    margin-top: 15%;
+    width: 100%;
+    padding: 22px;
+    color: white;
+    font-weight: bold;
+    background-color: #0066ee;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
