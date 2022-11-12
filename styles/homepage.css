@@ -13,7 +13,6 @@ body {
 }
 #topleft {
 	width: 50%;
-	
 }
 #topleft img {
 	width: 40%;
@@ -21,7 +20,7 @@ body {
 #topright {
 	width: 70%;
 	display: flex;
-	
+
 	justify-content: space-evenly;
 	align-items: center;
 }
@@ -344,7 +343,7 @@ body {
 }
 #footer {
 	width: 100%;
-	margin-top: 700px;
+	margin-top: 900px;
 	display: flex;
 	height: 100px;
 	text-align: center;
@@ -398,4 +397,11 @@ ul li {
 }
 #sidecolumn img + p {
 	font-size: 14px;
+}
+#comments div {
+	display: flex;
+}
+#comments div svg {
+	margin-top: 10px;
+	margin-left: 10px;
 }
