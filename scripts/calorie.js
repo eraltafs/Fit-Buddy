@@ -20,17 +20,24 @@ let input = document.getElementById('date');
 let next = document.getElementById('next');
 
 let display = document.getElementById('display');
+var age;
 input.oninput = ()=>{
-
-    // console.log(input.value)
+    let date = new Date()
+    let fullyear = date.getFullYear()
+    let val = input.value.split("-")
+    age = fullyear-Number(val[0])
+    console.log(age)
 }
 
 
 next.onclick=()=>{
-    if(input.value){
+    if(input.value&&age>=18){
         location.href = "/height_page.html"
+    }else if(age<18){
+        alert("you are a kid to use this app, please grow, baby!😎")
     }
     display.textContent = "Please enter a valid birthdate (mm/dd/yyyy)."
+    display.style.color = "red"
     
 }
     
