@@ -37,8 +37,7 @@ body{
     border-radius:15px;
     height:430PX;;
     padding:30px;
-    padding:7% 3%;
-    
+    padding:7% 3%;    
 }
 h1{
     width:85%;
@@ -66,7 +65,6 @@ button{
 button:hover{
     background-color:#0046a1;
 }
-
 p>span{
     padding:10px;
 }
