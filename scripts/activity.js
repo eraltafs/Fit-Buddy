@@ -27,6 +27,21 @@ let h3 = document.querySelector('#div3>h3');
 let h4 = document.querySelector('#div4>h3');
 
 
+d1.style.border="2px solid #0066EE"
+h1.style.color="#0066EE "
+
+
+
+d2.style.border="1px solid #111010b9"
+h2.style.color="#111010b9"
+
+d3.style.border="1px solid #111010b9"
+h3.style.color="#111010b9"
+
+d4.style.border="1px solid #111010b9"
+h4.style.color="#111010b9"
+
+
 
 d1.onclick=()=>{
     
@@ -42,6 +57,7 @@ h3.style.color="#111010b9"
 d4.style.border="1px solid #111010b9"
 h4.style.color="#111010b9"
 
+
 }
 d2.onclick=()=>{
     d2.style.border="2px solid #0066EE"
@@ -55,6 +71,7 @@ d2.onclick=()=>{
     
     d4.style.border="1px solid #111010b9"
     h4.style.color="#111010b9"
+   
     
 }
 d3.onclick=()=>{
@@ -69,6 +86,7 @@ d3.onclick=()=>{
     
     d4.style.border="1px solid #111010b9"
     h4.style.color="#111010b9"
+   
 }
 d4.onclick=()=>{
     d4.style.border="2px solid #0066EE"

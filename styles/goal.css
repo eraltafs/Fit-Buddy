@@ -68,6 +68,7 @@ h2{
 }
 #go>div:hover{
     border:solid 2px rgb(155, 144, 144);
+    cursor:pointer;
 }
 
 #back{

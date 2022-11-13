@@ -18,11 +18,11 @@
         <div id="weight">
             <h2>Please select which sex we should use to calculate your calorie needs.</h2>
             <div id="check">
-             <div>
+             <div id="c1">
                   <input name="newsletter" type="checkbox" id="check1" >
                   <h2>Male</h2>
              </div>
-               <div>
+               <div id="c2">
                   <input name="newsletter" type="checkbox" id="check2" >
                   <h2>Female</h2>
                </div>
@@ -34,9 +34,10 @@
             <div id="dob">
                 <div>
                     <h1>When were you born?</h1><br>
-                    <input type="date" placeholder="mm/dd/yyyy">
+                    <input  id="date" type="date" placeholder="mm/dd/yyyy">
                 </div>
-                <div>
+                <h3 id="display"></h3>
+                <div >
                     <h1>Where do you live?</h1><br>
                     <select id="country" name="country">
                         <option>country</option>
@@ -304,7 +305,7 @@
             
            <div id="back">
                <a href="activity.html"><button>BACK</button></a>
-               <a href="height_page.html"> <button>NEXT</button></a>
+               <a href=""> <button id="next">NEXT</button></a>
             </div>
         </div>
    

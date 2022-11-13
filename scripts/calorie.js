@@ -12,3 +12,16 @@ log.style.display="none";
 
 let log1 = document.getElementById('line');
 log1.style.display = 'none';
+
+
+
+let input = document.getElementById('date');
+
+let next = document.getElementById('next');
+
+let display = document.getElementById('display');
+
+
+
+    
+ 

@@ -35,7 +35,7 @@ body{
     font-family:Inter,Helvetica,Arial,-apple-system ;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     border-radius:15px;
-    height:500px;
+    height:520px;
     padding:38px 38px;
 }
 
@@ -65,11 +65,11 @@ h2{
 #check2{
     width:24px;
     height:24px;
-    margin-left:40px;
+    margin-left:38px;
 }
 
 #dob input{
-    width:180px;
+    width:44%;
     height:56px;
     border-radius:4px;   
     font-size:20px;
@@ -78,7 +78,7 @@ h2{
     margin-top:-7px;
 }
 #dob select{
-    width:180px;
+    width:44%;
     height:56px;
     border-radius:4px;   
     font-size:20px;
@@ -99,6 +99,9 @@ h2{
 #dob h1{
     color:#000000DE;
     font-size:20px;
+}
+#dob>h3{
+    margin-bottom:50px;
 }
 p{
     color:#00000099;
