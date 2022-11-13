@@ -1,3 +1,10 @@
+import {footer} from "/components/login_footer.js"
+
+let footer_div = document.getElementById('footer');
+
+footer_div.innerHTML = footer();
+
+
 let cards = [
     {
         img: "https://www.myfitnesspal.com/_next/static/media/check-mark.a58300ae.svg",
