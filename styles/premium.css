@@ -1,3 +1,17 @@
+#nav{
+    text-align:center;
+    margin-top:10px;
+    background-color:blue;
+    width:max-content;
+    margin:auto;
+    padding:4px 10px;
+    border-radius:4px;
+}
+#nav a{
+    color:white;
+    text-decoration:none;
+}
+
 #topDiv {
     display: flex;
     width: 100%;

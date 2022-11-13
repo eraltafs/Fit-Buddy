@@ -1,3 +1,5 @@
+
+
 import {footer} from "/components/login_footer.js"
 
 let footer_div = document.getElementById('footer');
