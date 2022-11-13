@@ -24,8 +24,9 @@ document.getElementById("loginbtn").onclick = ()=>{
 
     if(user==userlcl&&passlcl==pass){
 
-        console.log(user,pass)
+        location.href = "/homepage.html"
     }else{
         alert("Please enter correct credentials")
     }
+
 }
