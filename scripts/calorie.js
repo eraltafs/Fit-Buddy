@@ -15,7 +15,7 @@ log1.style.display = 'none';
 
 
 
-let input = document.getElementById('datet');
+let input = document.getElementById('date');
 
 let next = document.getElementById('next');
 
