@@ -119,7 +119,7 @@ button:hover {
 }
 #matchresults {
   width: 60%;
-  height: 200px;
+  height: 300px;
   border: 1px solid gray;
 }
 #matchresults > p {
@@ -159,6 +159,11 @@ p+button{
 #adder input{
   border: 1px solid green;
   width: 40px;
+}
+#entry{
+  color:green;
+  display:none;
+  margin-top:50px;
 }
 #footer {
   width: 100%;

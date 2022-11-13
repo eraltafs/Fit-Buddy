@@ -45,6 +45,7 @@ function Append(data) {
           },
         });
         console.log(await res.json())
+        document.getElementById('entry').style.display="block";
 
       };
     };

@@ -59,6 +59,7 @@ function Append(data){
         td4.style.cursor = "pointer"
         td4.onclick = async()=>{
             let res = await fetch( `https://shrouded-tundra-52307.herokuapp.com/done/${id}`,{method:"DELETE"})
+             window.location.reload();
         }
         tr.append(td1,td2,td3,td4)
         body.append(tr)
