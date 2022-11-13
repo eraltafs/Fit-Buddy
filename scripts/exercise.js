@@ -1,4 +1,4 @@
-if(window.location == "http://127.0.0.1:5500/exercise.html"){
+if(window.location == "https://eager-structure.netlify.app/exercise.html"){
     document.getElementById("navexeciseanch").style.backgroundColor = "#00548b"
 }
 
