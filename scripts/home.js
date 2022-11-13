@@ -7,13 +7,11 @@ userDetails.innerText = null;
 
 let userDetails1 = document.getElementById("username1");
 userDetails1.innerText = null;
-let username = JSON.parse(localStorage.getItem("username")) || "";
-if (username === "") {
-	//userDetails.innerText = "Anurag";
-	//window.location = "login.html";
+let username = localStorage.getItem("user");
+if (username === undefined) {
+	window.location = "login.html";
 }
-//console.log(username);
-userDetails = username;
+userDetails.innerText = username;
 
 let sharebtn = document.getElementById("share");
 sharebtn.addEventListener("click", fun);
