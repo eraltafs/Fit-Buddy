@@ -2,6 +2,16 @@ if (window.location == "https://eager-structure.netlify.app/add_to_diary.html") 
   document.getElementById("navexeciseanch").style.backgroundColor = "#00548b";
 }
 
+
+let userDetails = document.getElementById("username");
+userDetails.innerText = null;
+
+let username = localStorage.getItem("user");
+if (username === undefined) {
+	window.location = "login.html";
+}
+userDetails.innerText = username;
+
 document.getElementById("searchexerbtn").onclick = async () => {
   let search = document.getElementById("searchexerinp").value;
   let res = await fetch(`https://shrouded-tundra-52307.herokuapp.com/posts/?q=${search}`);
