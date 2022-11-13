@@ -1,0 +1,124 @@
+body{
+    margin:0
+}
+#nav{
+    display:flex;
+    justify-content:space-around;
+    height:100px;
+    align-items:center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;   
+}
+#nav a{
+    text-decoration-line: none;
+}
+#nav>div:nth-child(2){
+    display:flex;
+    list-style:none;
+    gap:10px;   
+}
+#nav li{
+    color:#0066EE;
+    cursor:pointer;
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    font-size:18.4px; 
+}
+#nav span{
+    color:grey
+}
+#nav img{
+    width:40%;
+}
+#height{
+    width:25%;
+    margin:auto;
+    margin-top:40px;
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border-radius:15px;
+    height:580px;
+    padding:40px 40px;
+    padding-left:4%;
+}
+
+h2{
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    color:#000000DE;
+    font-size:20px;
+    font-weight:bold;
+    
+}
+
+#feet{
+    margin-top:-5px;
+    margin-bottom:10px;
+}
+#feet >input{
+    padding:5% 2%; 
+    color:#111010b9;
+    cursor: pointer;
+    border:solid 1px rgb(212, 196, 196);   
+    border-radius:5px;
+}
+#feet>input:hover{
+    border:1px solid rgb(115, 112, 112)
+}
+#feet>input:nth-child(2){
+    margin-left:1.5%
+
+}
+span{
+    color:#0066EE;
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    font-size:16px;
+    cursor:pointer;
+}
+#height>div:nth-child(2){
+    margin-top:40px;
+}
+
+p{
+    color:#00000099;
+    margin-top:-8px; 
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    font-size:14px;
+
+}
+#height>div:nth-child(3){
+    margin-top:40px;
+}
+
+#back{
+    display:flex;
+    margin-top:30px;
+    width:100%;
+    margin-left:10px;
+}
+#back button{
+    width:180px;
+    height:48px;
+    border-radius:4px;
+    border:solid 1px grey;
+    margin-left:-5%;
+    Background-color:#FFFFFF;
+    color:#111010b9;
+    cursor: pointer;
+    font-size:16px;
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    font-weight:bold;
+}
+#back a:nth-child(2) button{
+    margin-left:15px;
+    background-color:#0066EE;
+    color:white;
+    font-weight:bold;
+}
+#back a:nth-child(2):hover button{
+    background-color:#0046a1;
+}
+#back a:nth-child(1) button{
+    border:2px solid #0066EE;
+    color:#0066EE;
+}
+#back a:nth-child(1):hover button{
+    background-color:rgba(242, 239, 239, 0.597);
+}

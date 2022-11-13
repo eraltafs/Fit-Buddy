@@ -1,0 +1,319 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+#navbar {
+  width: 70%;
+  margin: auto;
+  height: 100px;
+  border-bottom: 1px solid rgb(241, 240, 240);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navbar img {
+  width: 40%;
+}
+#goodhealth {
+  width: 70%;
+  height: 500px;
+  border: 0px solid rgb(245, 244, 244);
+  display: flex;
+  margin: auto;
+  margin-top: 2%;
+}
+#goodhealth > div {
+  border: 0px solid rgb(226, 224, 224);
+  width: 100%;
+  height: 100%;
+}
+#goodhealth > #leftgoodhealth > h1 {
+  font-size: 70px;
+}
+#goodhealth > #leftgoodhealth > p {
+  line-height: 22px;
+  width: 80%;
+}
+#goodhealth > #leftgoodhealth > button {
+  border: 0px;
+  background-color: #0066ee;
+  font-size: 20px;
+  color: white;
+  width: 60%;
+  height: 50px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+#goodhealth > #leftgoodhealth > button > a {
+  text-decoration: none;
+  color: white;
+}
+
+#blueberries {
+  width: 80%;
+  height: 500px;
+  border: 0px solid rgb(241, 239, 239);
+  display: flex;
+  margin: auto;
+  margin-top: 8%;
+}
+#blueberries > div {
+  border: 0px solid rgb(245, 244, 244);
+  width: 100%;
+  height: 100%;
+}
+#blueberries > #blueberriesright > h1 {
+  font-size: 60px;
+}
+#blueberries > #blueberriesright > p {
+  line-height: 22px;
+  width: 70%;
+}
+#blueberries > div > img {
+  width: 90%;
+}
+
+#tools {
+  margin: auto;
+  width: 40%;
+  height: 80px;
+  text-align: center;
+  border: 0px solid rgb(235, 233, 233);
+}
+#tools > h1 {
+  font-size: 42px;
+  font-weight: bolder;
+}
+#tools > p {
+  line-height: 22px;
+}
+#learn {
+  display: flex;
+  width: 80%;
+  height: 250px;
+  margin: auto;
+  margin-top: 10%;
+  text-align: center;
+}
+#learn > div {
+  width: 80%;
+  margin: auto;
+}
+#learn > div > img {
+  border-radius: 20px;
+  border: 1px solid grey;
+}
+#victory {
+  text-align: center;
+  width: 40%;
+  margin: auto;
+  height: 70px;
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+#victory > h1 {
+  font-size: 50px;
+}
+#victory > p {
+  line-height: 22px;
+}
+.swiper {
+  width: 950px;
+  height: 500px;
+  /* border: 1px solid green; */
+}
+.swiper-wrapper{
+  padding:0px 50px;
+  
+}
+.flexxxer{
+  
+  display: flex;
+  margin: auto;
+  
+}
+.flexxxer>div{
+  
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 43%;
+}
+.flexxxer>div img{
+  width: 100%;
+}
+q+p{
+  margin-left: 70%;
+  
+}
+
+#startbutton {
+  border: 0px;
+  background-color: #0066ee;
+  font-size: 20px;
+  color: white;
+  width: 30%;
+  height: 50px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 35%;
+  margin-top: 5%;
+}
+#startbutton > button:hover {
+  cursor: pointer;
+  background-color: #042cdf;
+}
+#startbutton > a {
+  text-decoration: none;
+  color: white;
+}
+#startbutton > a:hover {
+  cursor: pointer;
+  background-color: #042cdf;
+}
+
+#recipes {
+  height: 100px;
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  margin-top: 8%;
+}
+#recipes > h1 {
+  font-size: 50px;
+}
+#recipes > p {
+  font-size: 20px;
+  line-height: 22px;
+}
+#rece {
+  height: 290px;
+  width: 70%;
+  margin: auto;
+  margin-top: 8%;
+  display: flex;
+}
+#rece > div {
+  height: 100%;
+  width: 32%;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#rece > div > a {
+  text-decoration: none;
+  color: black;
+}
+#rece > div > a > h3 {
+  margin-left: 10px;
+}
+#rece > div > a > p {
+  margin-left: 10px;
+  color: #0066ee;
+  font-weight: bold;
+}
+#rece > div > a > img {
+  width: 100%;
+}
+#connect {
+  height: 110px;
+  width: 45%;
+  text-align: center;
+  margin: auto;
+  margin-top: 8%;
+}
+#connect > h1 {
+  font-size: 60px;
+}
+#connect > p {
+  line-height: 22px;
+  font-size: 20px;
+}
+#circle {
+  height: 400px;
+  width: 50%;
+  margin: auto;
+  margin-top: 12%;
+  border: 0px solid red;
+}
+#circle > img {
+  width: 100%;
+}
+#paragraph {
+  height: 120px;
+  width: 60%;
+  margin: auto;
+  margin-top: 5%;
+  border: 0px solid red;
+  text-align: center;
+  color: gray;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* footer css added */
+#MainContainer {
+  display: flex;
+  width: 100%;
+  background-color: #f6f6f8;
+  padding: 15px;
+}
+
+#leftContainer {
+  flex: 75%;
+}
+
+#rightContainer {
+  flex: 25%;
+}
+
+#rightContainer > select {
+  margin-left: 50%;
+}
+
+#line1 {
+  display: flex;
+  margin-left: 30%;
+  justify-content: space-between;
+}
+
+#line1 > div {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#line2 {
+  display: flex;
+  margin-left: 40%;
+  margin-right: 10%;
+  margin-top: 2%;
+  justify-content: space-between;
+}
+
+#line2 > div,
+#line3 > div {
+  font-weight: lighter;
+  font-size: 11px;
+  color: blueviolet;
+  cursor: pointer;
+}
+
+#line3 {
+  display: flex;
+  margin-left: 50%;
+  margin-right: 20%;
+  margin-top: 1%;
+  justify-content: space-around;
+}
+
+#copyright {
+  margin-left: 60%;
+  margin-right: 28%;
+  margin-top: 2%;
+  font-size: 11px;
+}

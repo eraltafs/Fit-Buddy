@@ -1,0 +1,128 @@
+body{
+    margin:0
+}
+#nav{
+    display:flex;
+    justify-content:space-around;
+    height:100px;
+    align-items:center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;   
+}
+#nav a{
+    text-decoration-line: none;
+}
+#nav>div:nth-child(2){
+    display:flex;
+    list-style:none;
+    gap:10px;   
+}
+#nav li{
+    color:#0066EE;
+    cursor:pointer;
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    font-size:18.4px; 
+}
+#nav span{
+    color:grey
+}
+#nav img{
+    width:40%;
+}
+#weight{
+    width:28%;
+    margin:auto;
+    margin-top:40px;
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    border-radius:15px;
+    height:600px;
+    padding:38px 38px;
+}
+#activity p{
+    color:#00000099;
+}
+#div1{
+    border:
+}
+h3{
+    color:#0e0c0cd3;
+}
+h2{
+    text-align:center;
+    font-size:20px;
+}
+#activity{
+    width:88%;
+    margin:auto;
+}
+#activity>div{
+    width:94%;
+   height: 90px;
+    gap:10px;
+    margin-top:9px;
+    cursor:pointer;
+    padding-left:3%;
+    padding-right:3%;
+    border-radius:4px;
+    border:solid 2px rgb(192, 184, 184);
+}
+
+#div1:hover{
+    border:rgb(115, 112, 112) solid 2px;
+}
+#div2:hover{
+    border:rgb(115, 112, 112) solid 2px;
+}
+#div3:hover{
+    border:rgb(115, 112, 112) solid 2px;
+}
+#div4:hover{
+    border:rgb(115, 112, 112) solid 2px;
+}
+#activity>div:nth-child(1){
+    margin-top:40px;
+}
+#activity p{
+    margin-top:-15px;
+
+}
+h2+p{
+    font-size:14px;
+    color:#00000099;
+    text-align:center;
+    margin-top:-10px;
+}
+#back{
+    display:flex;
+    margin-top:40px;
+    width:100%;
+}
+#back button{
+    width:180px;
+    height:48px;
+    border-radius:4px;
+    border:solid 1px grey;
+    margin-left:30px;
+    Background-color:#FFFFFF;
+    color:#111010b9;
+    cursor: pointer;
+    font-size:16px;
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+    font-weight:bold;
+}
+#back a:nth-child(2) button{
+    margin-left:15px;
+    background-color:#0066EE;
+    color:white;
+    font-weight:bold;
+}
+#back a:nth-child(2):hover button{
+    background-color:#0046a1;
+}
+#back a:nth-child(1) button{
+    border:2px solid #0066EE;
+    color:#0066EE;
+}
+#back a:nth-child(1):hover button{
+    background-color:rgba(242, 239, 239, 0.597);
+}

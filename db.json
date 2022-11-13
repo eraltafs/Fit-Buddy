@@ -1,0 +1,48 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "push ups"
+    },
+    {
+      "id": 2,
+      "title": "pull ups"
+    },
+    {
+      "id": 3,
+      "title": "jumping-jack"
+    },
+    {
+      "id": 5,
+      "title": "squats"
+    },
+    {
+      "id": 6,
+      "title": "lunges"
+    },
+    {
+      "id": 7,
+      "title": "hill-climbing"
+    },
+    {
+      "id": 8,
+      "title": "abdominal Crunches"
+    },
+    {
+      "id": 8,
+      "title": "bycycle Crunches"
+    },
+    {
+      "id": 5,
+      "title": "bent-over Row"
+    }
+  ],
+  "done": [
+    {
+      "title": "pull ups",
+      "calories": "46",
+      "minute": "5",
+      "id": 1
+    }
+  ]
+}
