@@ -1,4 +1,4 @@
-if (window.location == "https://eager-structure.netlify.app/homepage.html") {
+if (window.location == "https://eager-structures.netlify.app/homepage.html") {
 	document.getElementById("navhomeanch").style.backgroundColor = "#00548b";
 }
 

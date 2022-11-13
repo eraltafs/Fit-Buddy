@@ -1,4 +1,4 @@
-if (window.location == "https://eager-structure.netlify.app/add_to_diary.html") {
+if (window.location == "https://eager-structures.netlify.app/add_to_diary.html") {
   document.getElementById("navexeciseanch").style.backgroundColor = "#00548b";
 }
 
