@@ -12,3 +12,15 @@ log.style.display="none";
 
 let log1 = document.getElementById('line');
 log1.style.display = 'none';
+
+
+
+document.getElementById("loginbutton").onclick = ()=>{
+    let user = document.getElementById("user").value
+    let pass = document.getElementById("pass").value
+
+    localStorage.setItem("user",user)
+    localStorage.setItem("pass",pass)
+    location.href = "/login.html"
+}
+
