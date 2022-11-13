@@ -21,8 +21,10 @@ let passlcl = localStorage.getItem("pass");
 document.getElementById("loginbtn").onclick = ()=>{
     let user = document.getElementById("user").value
     let pass = document.getElementById("pass").value
-
-    if(user==userlcl&&passlcl==pass){
+    if(userlcl==null&&passlcl==null){
+        alert("Please create account ")
+    }
+   else if(user==userlcl&&passlcl==pass){
 
         location.href = "/homepage.html"
     }else{

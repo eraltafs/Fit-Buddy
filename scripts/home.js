@@ -8,10 +8,12 @@ userDetails.innerText = null;
 let userDetails1 = document.getElementById("username1");
 userDetails1.innerText = null;
 let username = localStorage.getItem("user");
-if (username === undefined) {
+console.log(username)
+if (username === null) {
 	window.location = "login.html";
 }
 userDetails.innerText = username;
+userDetails1.innerText = username;
 
 let sharebtn = document.getElementById("share");
 sharebtn.addEventListener("click", fun);

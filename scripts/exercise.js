@@ -9,16 +9,22 @@ let dd = today.getDate();
 
 if (dd < 10) dd = '0' + dd;
 
-var dayNames=['monday','tuesday','wednesday','thursday','friday','saturday','sunday']
+var dayNames=['sunday','monday','tuesday','wednesday','thursday','friday','saturday']
 var monthNames =["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-
-let dayn = dayNames[today.getDay()-1];
+let dayn = dayNames[today.getDay()];
 let monthn = monthNames[today.getMonth()]
 let date = `${dayn}, ${monthn} ${dd}, ${yyyy}`
 
 let datefield = document.getElementById("date").textContent = date
 
+let userDetails = document.getElementById("username");
+userDetails.innerText = null;
 
+let username = localStorage.getItem("user");
+if (username === undefined) {
+	window.location = "login.html";
+}
+userDetails.innerText = username;
 
 
 async function fetching(){
