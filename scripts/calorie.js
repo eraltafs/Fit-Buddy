@@ -15,13 +15,23 @@ log1.style.display = 'none';
 
 
 
-let input = document.getElementById('date');
+let input = document.getElementById('datet');
 
 let next = document.getElementById('next');
 
 let display = document.getElementById('display');
+input.oninput = ()=>{
+
+    // console.log(input.value)
+}
 
 
-
+next.onclick=()=>{
+    if(input.value){
+        location.href = "/height_page.html"
+    }
+    display.textContent = "Please enter a valid birthdate (mm/dd/yyyy)."
+    
+}
     
  

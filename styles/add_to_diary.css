@@ -91,7 +91,6 @@ body {
 h3 + h4 {
   margin-bottom: 2px;
 }
-
 button {
   background-color: rgb(98, 196, 98);
   color: white;
@@ -104,8 +103,6 @@ button {
 button:hover {
   background-color: rgb(64, 144, 64);
 }
-
-
 #exer{
 
   display: none;

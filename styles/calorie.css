@@ -128,7 +128,6 @@ p{
     display:flex;
     margin-top:30px;
     width:100%;
-    margin-left:10px;
 }
 #back button{
     width:180px;
@@ -143,13 +142,13 @@ p{
     font-family:Inter,Helvetica,Arial,-apple-system ;
     font-weight:bold;
 }
-#back a:nth-child(2) button{
+#back>button{
     margin-left:15px;
     background-color:#0066EE;
     color:white;
     font-weight:bold;
 }
-#back a:nth-child(2):hover button{
+#back>button:hover{
     background-color:#0046a1;
 }
 #back a:nth-child(1) button{
