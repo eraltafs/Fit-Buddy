@@ -4,7 +4,7 @@ if (window.location == "http://127.0.0.1:5500/add_to_diary.html") {
 
 document.getElementById("searchexerbtn").onclick = async () => {
   let search = document.getElementById("searchexerinp").value;
-  let res = await fetch(` http://localhost:3000/posts/?q=${search}`);
+  let res = await fetch(`https://shrouded-tundra-52307.herokuapp.com/posts/?q=${search}`);
   data = await res.json();
   Append(data);
 };
@@ -37,7 +37,7 @@ function Append(data) {
             calories,
             minute,
         } 
-        let res = await fetch(`http://localhost:3000/done`, {
+        let res = await fetch(`https://shrouded-tundra-52307.herokuapp.com/done`, {
           method: "POST",
           body: JSON.stringify(send),
           headers: {

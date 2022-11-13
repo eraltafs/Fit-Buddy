@@ -28,7 +28,7 @@ userDetails.innerText = username;
 
 
 async function fetching(){
-    let res = await fetch(`http://localhost:3000/done`)
+    let res = await fetch(`https://shrouded-tundra-52307.herokuapp.com/done`)
     data = await res.json()
     Append(data)
     let totalminute = 0
@@ -58,7 +58,7 @@ function Append(data){
         td4.style.color = "red"
         td4.style.cursor = "pointer"
         td4.onclick = async()=>{
-            let res = await fetch( `http://localhost:3000/done/${id}`,{method:"DELETE"})
+            let res = await fetch( `https://shrouded-tundra-52307.herokuapp.com/done/${id}`,{method:"DELETE"})
         }
         tr.append(td1,td2,td3,td4)
         body.append(tr)
