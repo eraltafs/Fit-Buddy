@@ -1,6 +1,6 @@
-if (window.location == "https://eager-structures.netlify.app/add_to_diary.html") {
+
   document.getElementById("navexeciseanch").style.backgroundColor = "#00548b";
-}
+
 
 
 let userDetails = document.getElementById("username");

@@ -1,6 +1,6 @@
-if(window.location == "https://eager-structures.netlify.app/exercise.html"){
+
     document.getElementById("navexeciseanch").style.backgroundColor = "#00548b"
-}
+
 
 
 const today = new Date();
