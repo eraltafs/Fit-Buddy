@@ -32,7 +32,7 @@ input.oninput = ()=>{
 
 next.onclick=()=>{
     if(input.value&&age>=18){
-        location.href = "/height_page.html"
+        location.href = "height_page.html"
     }else if(age<18){
         alert("you are a kid to use this app, please grow, baby!😎")
     }
