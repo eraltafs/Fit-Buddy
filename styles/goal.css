@@ -107,3 +107,16 @@ h2{
     background-color:rgba(242, 239, 239, 0.597);
 }
 
+@media screen and (max-width: 570px) {
+    #welcome{
+        width:95%;
+        margin-top:35%;
+        box-shadow: none;  
+    }
+}
+
+@media screen and (min-width:571px) and (max-width: 900px){
+    #welcome{
+        width:25rem;    
+    }
+}
