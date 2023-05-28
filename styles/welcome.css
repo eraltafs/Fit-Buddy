@@ -1,6 +1,9 @@
 body{
     margin:0
 }
+*{
+    font-family:Inter,Helvetica,Arial,-apple-system ; 
+}
 #nav{
     display:flex;
     justify-content:space-around;
@@ -19,7 +22,6 @@ body{
 #nav li{
     color:#0066EE;
     cursor:pointer;
-    font-family:Inter,Helvetica,Arial,-apple-system ;
     font-size:18.4px; 
 }
 #nav span{
@@ -32,7 +34,6 @@ body{
     width:27%;
     margin:auto;
     margin-top:40px;
-    font-family:Inter,Helvetica,Arial,-apple-system ;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     border-radius:15px;
     height:430PX;;
@@ -44,7 +45,6 @@ h1{
     text-align:center;
     margin:auto;
     margin-top:100px;
-    font-family:Inter,Helvetica,Arial,-apple-system ;
     font-size:24.3px;
     font-weight:bold;
 }
@@ -59,7 +59,6 @@ button{
     cursor: pointer;
     font-size:15px;
     margin-top:20px;
-    font-family:Inter,Helvetica,Arial,-apple-system ;
       font-weight:bold;
 }
 button:hover{
@@ -76,4 +75,18 @@ select{
 }
 a{
     text-decoration-line: none;
+}
+
+@media screen and (max-width: 570px) {
+    #welcome{
+        width:95%;
+        margin-top:35%;
+        box-shadow: none;  
+    }
+}
+
+@media screen and (min-width:571px) and (max-width: 900px){
+    #welcome{
+        width:25rem;    
+    }
 }

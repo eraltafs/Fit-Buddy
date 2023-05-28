@@ -50,7 +50,10 @@ b2.onclick=()=>{
     b1.style.color="#111010b9"
     count++;
 }
-
+let back = document.querySelector(".back")
+back.addEventListener("click",function(){
+    window.location.href="welcome.html"
+})
 let next = document.getElementById('next');
 
     next.onclick=()=>{

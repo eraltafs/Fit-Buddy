@@ -1,6 +1,9 @@
 body{
     margin:0
 }
+*{
+    font-family:Inter,Helvetica,Arial,-apple-system ;
+}
 #nav{
     display:flex;
     justify-content:space-around;
@@ -19,7 +22,6 @@ body{
 #nav li{
     color:#0066EE;
     cursor:pointer;
-    font-family:Inter,Helvetica,Arial,-apple-system ;
     font-size:18.4px;    
 }
 #nav span{
@@ -32,7 +34,6 @@ body{
     width:28%;
     margin:auto;
     margin-top:40px;
-    font-family:Inter,Helvetica,Arial,-apple-system ;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     border-radius:15px;
     height:420px;
@@ -57,7 +58,6 @@ p{
     cursor: pointer;
     font-size:16px;
     margin-top:5px;
-    font-family:Inter,Helvetica,Arial,-apple-system ;
     font-weight:bold;
 }
 #weight>button:hover{
@@ -66,20 +66,87 @@ p{
 
 #back{
     display:flex;
+    justify-content:space-around;  
+    margin-top:4rem;  
+}
+#back button{
+     padding:0.8rem 3rem;
+     border-radius:4px;
+     border:solid 1px grey;
+     Background-color:#FFFFFF;
+     color:#111010b9;
+     cursor: pointer;
+     font-size:16px;
+     font-weight:bold;
+}
+#back>div:nth-child(2) button{
+    background-color:#0066EE;
+    color:white;
+    font-weight:bold;
+
+}
+#back>div button:hover{
+    background-color:#0046a1;
+}
+#back div:nth-child(1) button{
+    border:2px solid #0066EE;
+    color:#0066EE;
+}
+#back div:nth-child(1):hover button{
+    background-color:rgba(242, 239, 239, 0.597);
+}
+
+@media screen and (max-width: 570px) {
+    #weight{
+        width:95%;
+        margin-top:35%;
+        box-shadow: none; 
+        padding:0  
+    }
+    
+}
+
+@media screen and (min-width:571px) and (max-width: 900px){
+    #weight{
+        width:25rem;      
+    }
+   
+}
+@media screen and (min-width:900px) and (max-width: 1200px){
+    #weight{
+        width:25rem;      
+    }
+    
+   
+}
+
+
+/* #back{
     margin-top:70px;
     width:100%;
+    border:1px solid red;
+}
+#back button{
+    width:180px;
+    height:48px;
+    margin:auto;
+    Background-color:#FFFFFF;
+    color:#111010b9;
+    cursor: pointer;
+    font-size:16px;
+    font-weight:bold;
+    margin:3px 12px
 }
 #back button{
     width:180px;
     height:48px;
     border-radius:4px;
     border:solid 1px grey;
-    margin-left:30px;
+    margin-left:60px;
     Background-color:#FFFFFF;
     color:#111010b9;
     cursor: pointer;
     font-size:16px;
-    font-family:Inter,Helvetica,Arial,-apple-system ;
     font-weight:bold;
 }
 #back>button{
@@ -87,14 +154,4 @@ p{
     background-color:#0066EE;
     color:white;
     font-weight:bold;
-}
-#back>button:hover{
-    background-color:#0046a1;
-}
-#back a:nth-child(1) button{
-    border:2px solid #0066EE;
-    color:#0066EE;
-}
-#back a:nth-child(1):hover button{
-    background-color:rgba(242, 239, 239, 0.597);
-}
+}  */

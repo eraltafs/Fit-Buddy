@@ -117,7 +117,7 @@ a{
   margin-bottom: 10%;
 }
 #victory > h1 {
-  font-size: 50px;
+  font-size: 3rem;
 }
 #victory > p {
   line-height: 22px;
@@ -185,24 +185,24 @@ q+p{
   margin-top: 8%;
 }
 #recipes > h1 {
-  font-size: 50px;
+  font-size: 3rem;
 }
 #recipes > p {
   font-size: 20px;
   line-height: 22px;
 }
 #rece {
-  height: 310px;
   width: 70%;
   margin: auto;
   margin-top: 8%;
   display: flex;
+  gap:1rem
 }
 #rece > div {
-  height: 100%;
   width: 32%;
   margin: auto;
   border-radius: 10px;
+  padding:2%;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 #rece > div > a {
@@ -223,7 +223,6 @@ q+p{
 }
 
 #connect {
-  height: 110px;
   width: 45%;
   text-align: center;
   margin: auto;
@@ -237,21 +236,17 @@ q+p{
   font-size: 20px;
 }
 #circle {
-  height: 400px;
   width: 50%;
   margin: auto;
   margin-top: 12%;
-  border: 0px solid red;
 }
 #circle > img {
   width: 100%;
 }
 #paragraph {
-  height: 120px;
   width: 60%;
   margin: auto;
   margin-top: 5%;
-  border: 0px solid red;
   text-align: center;
   color: gray;
   font-size: 13px;
@@ -323,17 +318,24 @@ q+p{
 
 
 /* Styles for small devices (up to 767px) */
+
 @media screen and (max-width: 570px) {
   /* CSS rules for small devices */
   body {
     font-size: 14px;
   }
+  #navbar {
+    width: 90%;
+  }
+  #navbar img {
+    width: 35%;
+  }
+  #navbar a:nth-child(2){
+    width:20%;
+  }
   #goodhealth{
     display:block;
-    text-align:center
-  }
-  #leftgoodhealth{
-    text-align:center;
+    text-align:left
   }
   #goodhealth > div:nth-child(2){
     width:90%;
@@ -341,7 +343,7 @@ q+p{
     margin-top:2rem;
   }
   #goodhealth > #leftgoodhealth > h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     
   }
   #goodhealth > #leftgoodhealth > p {
@@ -352,16 +354,25 @@ q+p{
     width:90%
   }
   #blueberries img{
-    width:90%
+    width:90%;
+    margin-left:5%
+  }
+  #goodhealth > #leftgoodhealth > button {
+    border: 0px;
+    font-size: 1rem;
+    width: 97%;
+    height: 50px;
+    border-radius: 5px;
+    font-weight: bold;
   }
 
   #blueberries {
-    width: 90%;
+    width: 100%;
     border: 0px solid rgb(241, 239, 239);
     display:flex;
     flex-direction:column-reverse;
     margin: auto;
-    text-align:center;
+    text-align:left;
   }
   #blueberries > div {
     width:90%;
@@ -371,7 +382,7 @@ q+p{
     margin:auto;
   }
   #blueberries > #blueberriesright > h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     width:95%
   }
   #blueberries > #blueberriesright > p {
@@ -379,7 +390,9 @@ q+p{
     width: 90%;
   }
   #tools {
-    width: 80%;
+    width: 75%;
+    margin-top:3rem;
+    text-align:left;
   }
   #learn {
     display: block;
@@ -388,11 +401,15 @@ q+p{
   }
   #victory {
     width: 80%;
+    margin-top:4rem
+  }
+  #victory > h1 {
+    font-size: 2rem;
   }
   .swiper {
     width: 90%;
     height:350px;
-    margin-top:20%;
+    margin-top:15%;
     /* border: 1px solid green; */
   }
   .swiper-wrapper{
@@ -401,16 +418,104 @@ q+p{
   }
   #startbutton {
     font-size: 15px;
-    width: 60%;
-    margin-left:20%;
+    width: 85%;
+    margin-left:6%;
+  }
+  #recipes {
+    width: 90%;
+    text-align: left;
+    margin: auto;
+    margin-left:6%;
+    margin-top: 8%;
+  }
+  #recipes > h1 {
+    font-size: 2rem;
+  }
+  #rece {
+    width: 95%;
+    margin: auto;
+    margin-top: 8%;
+    display: block;
+    gap:1rem;
+  }
+  #rece > div {
+    width: 95%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  #connect {
+    width: 90%;
+    text-align: left;
+    margin-left:6%;
+  }
+  #connect > h1 {
+    font-size: 2rem;
+  }
+  #circle {
+    width: 80%;
+  }
+  #paragraph {
+    width: 85%;
+    margin: auto;
+    margin-top: 7%;
+  }
+  #MainContainer {
+    display: block;
+    width: 85%;
+    background-color: #f6f6f8;
+    margin:auto;
+    padding: 15px;
+  }
+  #rightContainer {
+    margin-top:-8%;
+  }
+  
+  #rightContainer > select {
+    margin-left: 35%;
+  }
+  
+  #line1 {
+    display: none;
+
+  }
+
+  #line2 {
+    display: flex;
+    margin-top: 2%;
+    width:100%;
+    margin-left:0%;
+  }
+  #line3 {
+    display: flex;
+    margin:auto;
+    margin-top:2%;
+    width:70%;
+    justify-content: space-around;
+  }
+  #copyright {
+    margin-top: 11%;
+    width:100%;
+    text-align:center;
+    font-size: 11px;
+    margin-left:0;
+    margin-right:0;
   }
 }
-
 /* Styles for medium devices (768px to 1023px) */
 @media screen and (min-width: 561px) and (max-width: 900px) {
   /* CSS rules for medium devices */
   body {
     font-size: 16px;
+  }
+  #navbar {
+    width: 90%;
+  }
+  #navbar img {
+    width: 35%;
+  }
+  #navbar a:nth-child(2){
+    width:20%;
   }
   #goodhealth{
     display:block;
@@ -419,7 +524,7 @@ q+p{
     text-align:center;
   }
   #goodhealth > #leftgoodhealth > h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align:center
   }
   #goodhealth > #leftgoodhealth > p {
@@ -437,6 +542,14 @@ q+p{
     margin-top:1rem;
     
   }
+  #goodhealth > #leftgoodhealth > button {
+    border: 0px;
+    font-size: 1rem;
+    width: 75%;
+    height: 50px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
   #goodhealth img{
     width:95%
   }
@@ -450,7 +563,7 @@ q+p{
   }
   
   #blueberries > #blueberriesright > h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     width:90%;
     text-align:center
   }
@@ -462,11 +575,15 @@ q+p{
   #victory {
    margin-top:3rem;
     width: 80%;
+
+  }
+  #victory > h1 {
+    font-size: 2.5rem;
   }
   .swiper {
     width: 90%;
     height:350px;
-    margin-top:20%;
+    margin-top:10%;
     /* border: 1px solid green; */
   }
   .swiper-wrapper{
@@ -477,6 +594,87 @@ q+p{
     font-size: 17px;
     width: 70%;
     margin-left:18%;
+  }
+  #recipes {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    margin-top: 8%;
+  }
+  #recipes > h1 {
+    font-size: 2rem;
+  }
+  #rece {
+    width: 95%;
+    margin: auto;
+    margin-top: 8%;
+    display: flex;
+    gap:1rem;
+  }
+  #rece > div {
+    width: 95%;
+    margin: auto;
+    border-radius: 10px;
+
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  #connect {
+    width: 70%;
+    text-align: center;
+  }
+  #connect > h1 {
+    font-size: 2.5rem;
+  }
+
+  #circle {
+    width: 90%;
+  }
+  #paragraph {
+    width: 90%;
+    margin: auto;
+    margin-top: 6%;
+  }
+  #MainContainer {
+    display: block;
+    width: 90%;
+    background-color: #f6f6f8;
+    margin:auto;
+    padding: 1rem;
+  }
+  #rightContainer {
+    margin-top:-6%;
+  }
+  
+  #rightContainer > select {
+    margin-left: 40%;
+  }
+  
+  #line1 {
+    display: flex;
+    margin-left: 0%;
+    justify-content: space-between;
+  }
+
+  #line2 {
+    display: flex;
+    margin-top: 2%;
+    width:100%;
+    margin-left:0%;
+  }
+  #line3 {
+    display: flex;
+    margin:auto;
+    margin-top:2%;
+    width:70%;
+    justify-content: space-around;
+  }
+  #copyright {
+    margin-top: 5%;
+    width:100%;
+    text-align:center;
+    font-size: 11px;
+    margin-left:0;
+    margin-right:0;
   }
 }
 
@@ -510,6 +708,7 @@ q+p{
   }
 
 }
+
 
 
 
