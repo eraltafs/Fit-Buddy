@@ -14,7 +14,7 @@ userDetails.innerText = username;
 
 document.getElementById("searchexerbtn").onclick = async () => {
   let search = document.getElementById("searchexerinp").value;
-  let res = await fetch(`https://shrouded-tundra-52307.herokuapp.com/posts/?q=${search}`);
+  let res = await fetch(`http://localhost:8000/exercise?title=${search}`);
   data = await res.json();
   Append(data);
 };
