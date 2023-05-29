@@ -101,3 +101,13 @@ d4.onclick=()=>{
     d3.style.border="1px solid #111010b9"
     h3.style.color="#111010b9"
 }
+
+let back = document.querySelector(".back")
+back.addEventListener("click",function(){
+    window.location.href="weight_page.html"
+})
+let next = document.getElementById('next');
+
+next.addEventListener("click",function(){
+    window.location.href="calorie.html"
+})

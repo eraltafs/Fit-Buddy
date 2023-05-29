@@ -35,8 +35,7 @@ body{
     font-family:Inter,Helvetica,Arial,-apple-system ;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     border-radius:15px;
-    height:660px;
-    padding:40px 40px;
+    padding:2rem;
     padding-left:2.5%;
 }
 h1{
@@ -99,7 +98,7 @@ span{
     font-family:Inter,Helvetica,Arial,-apple-system ;
     color:#00000099;
     text-align:center;
-    margin-top:80px;
+    margin-top:2rem;
     padding-left:4%;
     width:95%;
     font-size:14px;
@@ -120,13 +119,13 @@ span{
  }
  
 #continue button{
-    width:88%;
+    width:90%;
     height:48px;
     border-radius:4px;
     background-color:#0066EE;
     color:white;
     border:0px;
-    margin-left:30px;
+    margin-left:1.5rem;
     cursor: pointer;
     font-size:15px;
     margin-top:20px;
@@ -134,7 +133,10 @@ span{
       font-weight:bold;
       margin-bottom:-8px;
 }
-
+#continue img{
+    width:90%;
+    margin-left:1.5rem;
+}  
  #continue button:hover{
     background-color:#0046a1;
 }
@@ -151,3 +153,43 @@ span{
     font-size:12px;
 }
 
+#continue a{
+    width:90%;
+}
+
+@media screen and (max-width: 570px) {
+    #username{
+        width:95%;
+        margin-top:10%;
+        box-shadow: none; 
+        padding:0 
+
+    } 
+    #continue img{
+        width:90%;
+    }  
+   
+}
+
+@media screen and (min-width:571px) and (max-width: 900px){
+    #username{
+        width:25rem;      
+    }
+    #continue a{
+        width:90%;
+    }
+    #continue img{
+        width:90%;
+    }  
+   
+}
+@media screen and (min-width:900px) and (max-width: 1200px){
+    #username{
+        width:25rem;      
+    }
+    #continue a{
+        width:90%;
+    }
+    
+   
+}

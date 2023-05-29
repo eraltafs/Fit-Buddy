@@ -12,3 +12,13 @@ log.style.display="none";
 
 let log1 = document.getElementById('line');
 log1.style.display = 'none';
+
+let back = document.querySelector(".back")
+back.addEventListener("click",function(){
+    window.location.href="calorie.html"
+})
+
+let next = document.querySelector("#next")
+next.addEventListener("click",function(){
+    window.location.href="goal.html"
+})

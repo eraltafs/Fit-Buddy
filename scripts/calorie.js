@@ -29,6 +29,10 @@ input.oninput = ()=>{
     console.log(age)
 }
 
+let back = document.querySelector(".back")
+back.addEventListener("click",function(){
+    window.location.href="activity.html"
+})
 
 next.onclick=()=>{
     if(input.value&&age>=18){
