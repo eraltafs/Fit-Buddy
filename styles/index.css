@@ -465,14 +465,11 @@ q+p{
     width: 85%;
     background-color: #f6f6f8;
     margin:auto;
-    padding: 15px;
-  }
-  #rightContainer {
-    margin-top:-8%;
+    padding: 1rem 15px;
   }
   
   #rightContainer > select {
-    margin-left: 35%;
+    display:none;
   }
   
   #line1 {
@@ -486,20 +483,25 @@ q+p{
     width:100%;
     margin-left:0%;
   }
+  #line2 div:nth-child(5)~div{
+    display:none;
+  }
   #line3 {
     display: flex;
     margin:auto;
     margin-top:2%;
-    width:70%;
+    width:90%;
     justify-content: space-around;
   }
   #copyright {
-    margin-top: 11%;
     width:100%;
     text-align:center;
     font-size: 11px;
     margin-left:0;
     margin-right:0;
+    margin:8%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 /* Styles for medium devices (768px to 1023px) */
@@ -639,7 +641,7 @@ q+p{
     width: 90%;
     background-color: #f6f6f8;
     margin:auto;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
   }
   #rightContainer {
     margin-top:-6%;
@@ -705,6 +707,48 @@ q+p{
     width:100%;
     margin-top:10%;
    
+  }
+  #MainContainer {
+    display: block;
+    width: 90%;
+    background-color: #f6f6f8;
+    margin:auto;
+    padding: 2.8rem 1rem;
+  }
+  #rightContainer {
+    margin-top:-6%;
+  }
+  
+  #rightContainer > select {
+    margin-left: 40%;
+  }
+  
+  #line1 {
+    display: flex;
+    margin-left: 0%;
+    justify-content: space-between;
+  }
+
+  #line2 {
+    display: flex;
+    margin-top: 2%;
+    width:100%;
+    margin-left:0%;
+  }
+  #line3 {
+    display: flex;
+    margin:auto;
+    margin-top:2%;
+    width:70%;
+    justify-content: space-around;
+  }
+  #copyright {
+    margin-top: 5%;
+    width:100%;
+    text-align:center;
+    font-size: 11px;
+    margin-left:-2rem;
+    margin-right:0;
   }
 
 }
