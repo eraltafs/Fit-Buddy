@@ -35,8 +35,7 @@ body{
     font-family:Inter,Helvetica,Arial,-apple-system ;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     border-radius:15px;
-    height:520px;
-    padding:38px 38px;
+    padding:2rem;
 }
 
 h2{
@@ -105,10 +104,11 @@ h2{
 }
 p{
     color:#00000099;
-    margin-left:38px;
+    width:90%;
+    margin-left:1em;
     text-align:center;
-    margin-bottom:-15px;
-    margin-top:45px;
+ 
+    margin-top:1.5rem;
 }
 #blue img{
   width:17px;
@@ -126,35 +126,56 @@ p{
 
 #back{
     display:flex;
-    margin-top:30px;
-    width:100%;
+    justify-content:space-around;  
+    margin-top:2rem;  
 }
 #back button{
-    width:180px;
-    height:48px;
-    border-radius:4px;
-    border:solid 1px grey;
-    margin-left:30px;
-    Background-color:#FFFFFF;
-    color:#111010b9;
-    cursor: pointer;
-    font-size:16px;
-    font-family:Inter,Helvetica,Arial,-apple-system ;
-    font-weight:bold;
+     padding:0.8rem 3rem;
+     border-radius:4px;
+     border:solid 1px grey;
+     Background-color:#FFFFFF;
+     color:#111010b9;
+     cursor: pointer;
+     font-size:16px;
+     font-weight:bold;
 }
-#back>button{
-    margin-left:15px;
+#back>div:nth-child(2) button{
     background-color:#0066EE;
     color:white;
     font-weight:bold;
+
 }
-#back>button:hover{
+#back>div button:hover{
     background-color:#0046a1;
 }
-#back a:nth-child(1) button{
+#back div:nth-child(1) button{
     border:2px solid #0066EE;
     color:#0066EE;
 }
-#back a:nth-child(1):hover button{
+#back div:nth-child(1):hover button{
     background-color:rgba(242, 239, 239, 0.597);
+}
+
+@media screen and (max-width: 570px) {
+    #weight{
+        width:95%;
+        margin-top:10%;
+        box-shadow: none; 
+        padding:0  
+    }
+    
+}
+
+@media screen and (min-width:571px) and (max-width: 900px){
+    #weight{
+        width:25rem;      
+    }
+   
+}
+@media screen and (min-width:900px) and (max-width: 1200px){
+    #weight{
+        width:25rem;      
+    }
+    
+   
 }

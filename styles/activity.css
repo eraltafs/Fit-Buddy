@@ -35,15 +35,12 @@ body{
     font-family:Inter,Helvetica,Arial,-apple-system ;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     border-radius:15px;
-    height:600px;
-    padding:38px 38px;
+    padding:2rem;
 }
 #activity p{
     color:#00000099;
 }
-#div1{
-    border:
-}
+
 h3{
     color:#0e0c0cd3;
 }
@@ -57,7 +54,6 @@ h2{
 }
 #activity>div{
     width:94%;
-   height: 90px;
     gap:10px;
     margin-top:9px;
     cursor:pointer;
@@ -83,7 +79,7 @@ h2{
     margin-top:40px;
 }
 #activity p{
-    margin-top:-15px;
+    margin-top:-1rem;
 
 }
 h2+p{
@@ -94,35 +90,55 @@ h2+p{
 }
 #back{
     display:flex;
-    margin-top:40px;
-    width:100%;
+    justify-content:space-around;  
+    margin-top:4rem;  
 }
 #back button{
-    width:180px;
-    height:48px;
-    border-radius:4px;
-    border:solid 1px grey;
-    margin-left:30px;
-    Background-color:#FFFFFF;
-    color:#111010b9;
-    cursor: pointer;
-    font-size:16px;
-    font-family:Inter,Helvetica,Arial,-apple-system ;
-    font-weight:bold;
+     padding:0.8rem 3rem;
+     border-radius:4px;
+     border:solid 1px grey;
+     Background-color:#FFFFFF;
+     color:#111010b9;
+     cursor: pointer;
+     font-size:16px;
+     font-weight:bold;
 }
-#back a:nth-child(2) button{
-    margin-left:15px;
+#back>div:nth-child(2) button{
     background-color:#0066EE;
     color:white;
     font-weight:bold;
+
 }
-#back a:nth-child(2):hover button{
+#back>div button:hover{
     background-color:#0046a1;
 }
-#back a:nth-child(1) button{
+#back div:nth-child(1) button{
     border:2px solid #0066EE;
     color:#0066EE;
 }
-#back a:nth-child(1):hover button{
+#back div:nth-child(1):hover button{
     background-color:rgba(242, 239, 239, 0.597);
+}
+@media screen and (max-width: 570px) {
+    #weight{
+        width:95%;
+        margin-top:10%;
+        box-shadow: none; 
+        padding:0  
+    }
+    
+}
+
+@media screen and (min-width:571px) and (max-width: 900px){
+    #weight{
+        width:25rem;      
+    }
+   
+}
+@media screen and (min-width:900px) and (max-width: 1200px){
+    #weight{
+        width:25rem;      
+    }
+    
+   
 }
