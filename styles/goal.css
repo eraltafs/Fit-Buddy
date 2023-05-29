@@ -36,10 +36,27 @@ body{
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
     border-radius:15px;
     height:540px;
+    position:relative;
     padding:2% 5%;
 }
 
-
+progress{
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: rgb(200, 194, 194);
+    height:10px
+}
+progress::-webkit-progress-value {
+    background-color: #0066EE; /* Blue color for WebKit browsers (Chrome, Safari) */
+    border-radius:30px
+}
+  
+  progress::-moz-progress-bar {
+    background-color: #0066EE; /* Blue color for Firefox */
+    border-radius:30px
+}
 h2{
     font-size:20px;
     font-family:Inter,Helvetica,Arial,-apple-system ;
@@ -106,7 +123,7 @@ h2{
 @media screen and (max-width: 570px) {
     #goal{
         width:95%;
-        margin-top:10%;
+        margin-top:0%;
         box-shadow: none; 
         padding:0 
 
@@ -115,11 +132,24 @@ h2{
         text-align:left;
         margin-left:0.3rem
     }
+    progress{
+        width:100%;
+        position:relative;
+        margin:0;
+        background-color: rgb(200, 194, 194);  
+        height:15px   
+    }
+    progress+h2{
+        margin-top:10%;
+    }
 }
 
 @media screen and (min-width:571px) and (max-width: 900px){
     #goal{
         width:25rem;      
+    }
+    progress+h2{
+        margin-top:15%;
     }
    
 }

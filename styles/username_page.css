@@ -37,6 +37,26 @@ body{
     border-radius:15px;
     padding:2rem;
     padding-left:2.5%;
+    position:relative;
+}
+progress{
+    width:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: rgb(200, 194, 194);
+    height: 10px;
+}
+progress::-webkit-progress-value {
+    background-color: #0066EE; /* Blue color for WebKit browsers (Chrome, Safari) */
+    border-radius:30px;
+    height: 10px;
+}
+  
+  progress::-moz-progress-bar {
+    background-color: #0066EE; /* Blue color for Firefox */
+    border-radius:30px;
+    height: 10px;
 }
 h1{
     font-family:Inter,Helvetica,Arial,-apple-system ;
@@ -50,7 +70,7 @@ h1{
 
 }
 #username input{
-    padding:4% 2%;
+    padding:1rem 1.5rem;
     width:85%;
     margin-top:10px;
     border-radius:5px;
@@ -160,14 +180,23 @@ span{
 @media screen and (max-width: 570px) {
     #username{
         width:95%;
-        margin-top:10%;
         box-shadow: none; 
-        padding:0 
-
+        margin:0%;
+        padding:0;
     } 
     #continue img{
         width:90%;
-    }  
+    } 
+    progress{
+        width:100%;
+        position:relative;
+        margin:0;
+        border:1px solid red;
+        background-color: rgb(200, 194, 194);  
+    }
+    progress+div{
+        margin-top:10%;
+    } 
    
 }
 
