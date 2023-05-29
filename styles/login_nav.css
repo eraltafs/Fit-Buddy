@@ -22,7 +22,12 @@ body{
     font-family:Inter,Helvetica,Arial,-apple-system ;
     font-size:14.4px;
 }
-
+#nav #logIn{
+    display:none
+}
+#nav #line{
+    display:none
+}
 #nav span{
     color:grey
 }
@@ -95,7 +100,7 @@ form span{
    
 }
 #login img{
-    width:380px;
+    width:22.7rem;
     height:50px;
     margin-left:30px;
 }
