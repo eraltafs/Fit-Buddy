@@ -14,7 +14,7 @@ userDetails.innerText = username;
 
 document.getElementById("searchexerbtn").onclick = async () => {
   let search = document.getElementById("searchexerinp").value;
-  let res = await fetch(`http://localhost:8000/exercise?title=${search}`);
+  let res = await fetch(`https://server-fitbuddy.onrender.com/exercise?title=${search}`);
   data = await res.json();
   Append(data);
 };
@@ -47,7 +47,7 @@ function Append(data) {
             calories,
             minute,
         } 
-        let res = await fetch(`https://shrouded-tundra-52307.herokuapp.com/done`, {
+        let res = await fetch(`https://server-fitbuddy.onrender.com/6474d03465e890eecd95cd89/exercise`, {
           method: "POST",
           body: JSON.stringify(send),
           headers: {
