@@ -8,7 +8,7 @@ const userRouter = Router();
 userRouter.get("/", async (req, res) => {
   res.send(await userModel.find());
 });
-userRouter.get("/profile",async (req, res) => {
+userRouter.get("/profile", async (req, res) => {
   res.send(await userModel.findById(req.body._id));
 });
 userRouter.post("/register", async (req, res) => {
@@ -64,35 +64,55 @@ userRouter.post("/login", async (req, res) => {
     if (user?.email) {
       bcrypt.compare(password, user.password, async (err, result) => {
         if (result) {
-          const token = jwt.sign({_id:user._id, email: user.email }, process.env.jwtsec);
+          const token = jwt.sign(
+            { _id: user._id, email: user.email },
+            process.env.jwtsec
+          );
           return res.send({ msg: "login success", token });
         } else {
           console.log(err);
-          return res.status(404).send({msg:"user not found"});
+          return res.status(404).send({ msg: "user not found" });
         }
       });
     } else {
-      return res.status(404).send({msg:"user not found"});
+      return res.status(404).send({ msg: "user not found" });
     }
   } catch (error) {
     console.log(error);
     return res.status(500).send({ msg: "server error" });
   }
 });
-userRouter.use(authentication)
+userRouter.use(authentication);
 
 userRouter.get("/pro", async (req, res) => {
-  res.send(await userModel.findById(req.body._id));
+  console.log(req.body);
+  const { _id, email } = req.body;
+  try {
+    let user =await userModel.aggregate([
+      
+      {
+        $project: {
+          email: 1,
+          excercises:1,
+
+        },
+      },
+    ]) 
+    res.send(user[0]);
+  } catch (error) {
+    console.log(error);
+    res.send({ msg: "error" });
+  }
 });
 userRouter.post("/excercise", async (req, res) => {
   const user_ID = req.body.id;
   const date = new Date();
-    const isoDate = date.toISOString();
-    req.body.date = isoDate;
+  const isoDate = date.toISOString();
+  req.body.date = isoDate;
   try {
     const user = await userModel.findOne({ _id: user_ID });
     if (!user) {
-      return res.status(404).send({msg:"user not found"});
+      return res.status(404).send({ msg: "user not found" });
     }
 
     const item = req.body;
@@ -100,43 +120,48 @@ userRouter.post("/excercise", async (req, res) => {
 
     await user.save();
 
-    res.send({msg:"item added to menu"});
+    res.send({ msg: "item added to menu" });
   } catch (error) {
     console.log(error);
-    res.status(404).send({msg:"item not added"});
+    res.status(404).send({ msg: "item not added" });
   }
 });
 userRouter.get("/excercise", async (req, res) => {
-    const {email}= req.query
-    const {date} = req.body
-    const desiredDate = new Date(date);
-  
-    const user = await userModel.aggregate([
-      { $match: { email} },
-      {
-        $project: {
-          email: 1,
-          excercises: {
-            $filter: {
-              input: '$excercises',
-              as: 'exercise',
-              cond: {
-                $eq: [
-                  { $dateToString: { format: '%Y-%m-%d', date: '$$exercise.date' } },
-                  { $dateToString: { format: '%Y-%m-%d', date: desiredDate } }
-                ]
-              }
-            }
-          }
-        }
-      }
-    ]);
-  
-    if (user.length === 0) {
-      return res.status(404).send({ message: 'User not found' });
-    }
-  
-    res.send(user[0]);
-  });
-  
+  const { email } = req.query;
+  const { date } = req.body;
+  const desiredDate = new Date(date);
+
+  const user = await userModel.aggregate([
+    { $match: { email } },
+    {
+      $project: {
+        email: 1,
+        excercises: {
+          $filter: {
+            input: "$excercises",
+            as: "exercise",
+            cond: {
+              $eq: [
+                {
+                  $dateToString: {
+                    format: "%Y-%m-%d",
+                    date: "$$exercise.date",
+                  },
+                },
+                { $dateToString: { format: "%Y-%m-%d", date: desiredDate } },
+              ],
+            },
+          },
+        },
+      },
+    },
+  ]);
+
+  if (user.length === 0) {
+    return res.status(404).send({ message: "User not found" });
+  }
+
+  res.send(user[0]);
+});
+
 module.exports = { userRouter };

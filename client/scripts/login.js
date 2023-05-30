@@ -29,6 +29,7 @@ document.getElementById("loginbtn").onclick = async () => {
     });
     let { token } = await res.json();
     if (token) {
+        localStorage.setItem("token", token)
      location.href = "./homepage.html"
     }
   } else {

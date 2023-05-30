@@ -7,22 +7,23 @@ let userDetails1 = document.getElementById("username1");
 userDetails1.innerText = null;
 
 if (!localStorage.getItem("token")) {
-  window.location = "login.html";
+	window.location = "login.html";
 } else {
-  window.onload = async (event) => {
-    console.log("page is fully loaded");
-    let res = await fetch(`https://server-fitbuddy.onrender.com/user/pro`, {
-      method: "GET",
+	window.onload = async (event) => {
+	  console.log(localStorage.getItem("token"))
+    
+    let res = await fetch(`http://localhost:8000/user/pro`, {
       headers: {
-        authentication: `Bearer ${localStorage.getItem("token")}`,
+        "authentication": `Bearer ${localStorage.getItem("token")}`,
         "Content-Type": "application/json",
       },
     });
-    console.log(await res.json());
+    let jsondata = await res.json()
+	const {email} = jsondata
+	userDetails.innerText =email
+	userDetails1.innerText =email
   };
 }
-userDetails.innerText = username;
-userDetails1.innerText = username;
 
 let sharebtn = document.getElementById("share");
 sharebtn.addEventListener("click", fun);
