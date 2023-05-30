@@ -83,7 +83,6 @@ userRouter.post("/login", async (req, res) => {
 userRouter.use(authentication);
 
 userRouter.get("/pro", async (req, res) => {
-  console.log(req.body);
   const { email } = req.body;
   try {
     let user = await userModel.aggregate([
