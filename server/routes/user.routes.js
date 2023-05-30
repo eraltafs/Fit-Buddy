@@ -64,11 +64,11 @@ userRouter.post("/login", async (req, res) => {
           return res.send({ msg: "login success", token });
         } else {
           console.log(err);
-          return res.status(404).send("user not found");
+          return res.status(404).send({msg:"user not found"});
         }
       });
     } else {
-      return res.status(404).send("user not found");
+      return res.status(404).send({msg:"user not found"});
     }
   } catch (error) {
     console.log(error);
@@ -78,13 +78,14 @@ userRouter.post("/login", async (req, res) => {
 
 userRouter.post("/:id/excercise", async (req, res) => {
   const user_ID = req.params.id;
+  console.log(user_ID)
   const date = new Date();
     const isoDate = date.toISOString();
     req.body.date = isoDate;
   try {
     const user = await userModel.findOne({ _id: user_ID });
     if (!user) {
-      return res.status(404).send("user not found");
+      return res.status(404).send({msg:"user not found"});
     }
 
     const item = req.body;
@@ -92,10 +93,10 @@ userRouter.post("/:id/excercise", async (req, res) => {
 
     await user.save();
 
-    res.send("item added to menu");
+    res.send({msg:"item added to menu"});
   } catch (error) {
     console.log(error);
-    res.status(404).send("item not added");
+    res.status(404).send({msg:"item not added"});
   }
 });
 userRouter.get("/excercise", async (req, res) => {

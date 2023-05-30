@@ -47,7 +47,7 @@ function Append(data) {
             calories,
             minute,
         } 
-        let res = await fetch(`https://server-fitbuddy.onrender.com/6474d03465e890eecd95cd89/exercise`, {
+        let res = await fetch(`https://server-fitbuddy.onrender.com/user/6474d03465e890eecd95cd89/excercise`, {
           method: "POST",
           body: JSON.stringify(send),
           headers: {
