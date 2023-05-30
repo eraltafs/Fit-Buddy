@@ -62,7 +62,8 @@ async function fetching() {
       },
     }
   );
-  data = await res.json();
+  let data = await res.json();
+  console.log(data)
   Append(data);
   let totalminute = 0;
   let totalcalories = 0;
@@ -70,7 +71,7 @@ async function fetching() {
     totalminute += Number(minute);
     totalcalories += Number(calories);
   });
-  console.log(totalminute, totalcalories);
+  
   document.getElementById("totminute").textContent = `${totalminute}` || "0";
   document.getElementById("totcalories").textContent =
     `${totalcalories}` || "0";
@@ -78,7 +79,7 @@ async function fetching() {
 fetching();
 let body = document.getElementById("exercisebody");
 function Append(data) {
-  data.forEach(({ id, calories, title, minute }) => {
+  data.forEach(({ _id, calories, title, minute }) => {
     let tr = document.createElement("tr");
     let td1 = document.createElement("td");
     td1.textContent = title;
@@ -92,11 +93,12 @@ function Append(data) {
     td4.style.color = "red";
     td4.style.cursor = "pointer";
     td4.onclick = async () => {
+        console.log(_id)
       let res = await fetch(
-        `https://shrouded-tundra-52307.herokuapp.com/done/${id}`,
+        `http://localhost:8000/user/excercise/${_id}`,
         { method: "DELETE" }
       );
-      window.location.reload();
+    //   window.location.reload();
     };
     tr.append(td1, td2, td3, td4);
     body.append(tr);

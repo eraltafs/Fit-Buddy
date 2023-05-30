@@ -8,9 +8,7 @@ const userRouter = Router();
 userRouter.get("/", async (req, res) => {
   res.send(await userModel.find());
 });
-userRouter.get("/profile", async (req, res) => {
-  res.send(await userModel.findById(req.body._id));
-});
+
 userRouter.post("/register", async (req, res) => {
   const {
     email,
@@ -65,7 +63,7 @@ userRouter.post("/login", async (req, res) => {
       bcrypt.compare(password, user.password, async (err, result) => {
         if (result) {
           const token = jwt.sign(
-            { _id: user._id, email: user.email },
+            { email: user.email },
             process.env.jwtsec
           );
           return res.send({ msg: "login success", token });
@@ -88,15 +86,15 @@ userRouter.get("/pro", async (req, res) => {
   console.log(req.body);
   const { email } = req.body;
   try {
-    let user =await userModel.aggregate([
+    let user = await userModel.aggregate([
       { $match: { email } },
       {
         $project: {
           email: 1,
-          excercises:1,
+          excercises: 1,
         },
       },
-    ]) 
+    ]);
     res.send(user[0]);
   } catch (error) {
     console.log(error);
@@ -104,12 +102,12 @@ userRouter.get("/pro", async (req, res) => {
   }
 });
 userRouter.post("/excercise", async (req, res) => {
-  const user_ID = req.body._id;
+  const {email} = req.body;
   const date = new Date();
   const isoDate = date.toISOString();
   req.body.date = isoDate;
   try {
-    const user = await userModel.findOne({ _id: user_ID });
+    const user = await userModel.findOne({ email });
     if (!user) {
       return res.status(404).send({ msg: "user not found" });
     }
@@ -127,40 +125,45 @@ userRouter.post("/excercise", async (req, res) => {
 });
 userRouter.get("/excercise", async (req, res) => {
   const { email } = req.body;
-  console.log(req.query)
   const desiredDate = new Date(req.query.date);
-
-  const user = await userModel.aggregate([
-    { $match: { email } },
-    {
-      $project: {
-        email: 1,
-        excercises: {
-          $filter: {
-            input: "$excercises",
-            as: "exercise",
-            cond: {
-              $eq: [
-                {
-                  $dateToString: {
-                    format: "%Y-%m-%d",
-                    date: "$$exercise.date",
+  try {
+    const user = await userModel.aggregate([
+      { $match: { email } },
+      {
+        $project: {
+          email: 1,
+          excercises: {
+            $filter: {
+              input: "$excercises",
+              as: "exercise",
+              cond: {
+                $eq: [
+                  {
+                    $dateToString: {
+                      format: "%Y-%m-%d",
+                      date: "$$exercise.date",
+                    },
                   },
-                },
-                { $dateToString: { format: "%Y-%m-%d", date: desiredDate } },
-              ],
+                  { $dateToString: { format: "%Y-%m-%d", date: desiredDate } },
+                ],
+              },
             },
           },
         },
       },
-    },
-  ]);
-console.log(user)
-  if (user.length === 0) {
-    return res.status(404).send({ message: "User not found" });
+    ]);
+    
+    if (user.length === 0) {
+      return res.status(404).send({ message: "User not found" });
+    }
+    res.send(user[0].excercises);
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({ msg: "item not added" });
   }
-
-  res.send(user[0]);
 });
-
+userRouter.delete("/excercise/:id", async (req, res) => {
+  console.log(req.params.id)
+  res.send({msg:"hello deleters"})
+});
 module.exports = { userRouter };
