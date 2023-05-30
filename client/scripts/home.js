@@ -1,3 +1,5 @@
+import getprofile from "./getprofile.js";
+
 document.getElementById("navhomeanch").style.backgroundColor = "#00548b";
 
 let userDetails = document.getElementById("username");
@@ -10,15 +12,7 @@ if (!localStorage.getItem("token")) {
 	window.location = "login.html";
 } else {
 	window.onload = async (event) => {
-	  console.log(localStorage.getItem("token"))
-    
-    let res = await fetch(`http://localhost:8000/user/pro`, {
-      headers: {
-        "authentication": `Bearer ${localStorage.getItem("token")}`,
-        "Content-Type": "application/json",
-      },
-    });
-    let jsondata = await res.json()
+    let jsondata = await getprofile()
 	const {email} = jsondata
 	userDetails.innerText =email
 	userDetails1.innerText =email
@@ -30,7 +24,6 @@ sharebtn.addEventListener("click", fun);
 function fun() {
   let commentdiv = document.getElementById("comments");
   let comments = document.getElementById("commenting").value;
-  console.log(comments);
   let div = document.createElement("div");
   let p = document.createElement("h1");
   p.innerText = comments;
@@ -55,4 +48,4 @@ function fun() {
   commentdiv.append(div);
   comments.innerText = null;
 }
-console.log(comments);
+

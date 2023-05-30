@@ -86,15 +86,14 @@ userRouter.use(authentication);
 
 userRouter.get("/pro", async (req, res) => {
   console.log(req.body);
-  const { _id, email } = req.body;
+  const { email } = req.body;
   try {
     let user =await userModel.aggregate([
-      
+      { $match: { email } },
       {
         $project: {
           email: 1,
           excercises:1,
-
         },
       },
     ]) 
