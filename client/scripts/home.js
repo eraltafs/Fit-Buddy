@@ -9,8 +9,10 @@ let userDetails1 = document.getElementById("username1");
 userDetails1.innerText = null;
 let username = localStorage.getItem("user");
 console.log(username)
-if (username === null) {
+if (!localStorage.getItem(token)) {
 	window.location = "login.html";
+}else{
+	
 }
 userDetails.innerText = username;
 userDetails1.innerText = username;

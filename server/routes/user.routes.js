@@ -8,6 +8,9 @@ const userRouter = Router();
 userRouter.get("/", async (req, res) => {
   res.send(await userModel.find());
 });
+userRouter.get("/profile",async (req, res) => {
+  res.send(await userModel.findById(req.body._id));
+});
 userRouter.post("/register", async (req, res) => {
   const {
     email,
@@ -77,9 +80,12 @@ userRouter.post("/login", async (req, res) => {
   }
 });
 userRouter.use(authentication)
-userRouter.post("/:id/excercise", async (req, res) => {
-  const user_ID = req.params.id;
-  console.log(user_ID)
+
+userRouter.get("/pro", async (req, res) => {
+  res.send(await userModel.findById(req.body._id));
+});
+userRouter.post("/excercise", async (req, res) => {
+  const user_ID = req.body.id;
   const date = new Date();
     const isoDate = date.toISOString();
     req.body.date = isoDate;

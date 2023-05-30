@@ -29,9 +29,7 @@ document.getElementById("loginbtn").onclick = async () => {
     });
     let { token } = await res.json();
     if (token) {
-      localStorage.setItem("token", token);
-      var decoded = jwt.verify(token, "hashedtoken");
-      console.log(decoded.foo);
+     location.href = "./homepage.html"
     }
   } else {
     alert("Please enter all credentials");
