@@ -18,7 +18,7 @@ if (!localStorage.getItem("token")) {
 const today = new Date();
 const yyyy = today.getFullYear();
 let dd = today.getDate();
-let mm = today.getMonth()+1;
+let mm = today.getMonth() + 1;
 
 if (dd < 10) dd = "0" + dd;
 if (mm < 10) mm = "0" + mm;
@@ -63,7 +63,7 @@ async function fetching() {
     }
   );
   let data = await res.json();
-  console.log(data)
+  console.log(data);
   Append(data);
   let totalminute = 0;
   let totalcalories = 0;
@@ -71,7 +71,7 @@ async function fetching() {
     totalminute += Number(minute);
     totalcalories += Number(calories);
   });
-  
+
   document.getElementById("totminute").textContent = `${totalminute}` || "0";
   document.getElementById("totcalories").textContent =
     `${totalcalories}` || "0";
@@ -93,12 +93,18 @@ function Append(data) {
     td4.style.color = "red";
     td4.style.cursor = "pointer";
     td4.onclick = async () => {
-        console.log(_id)
+      console.log(_id);
       let res = await fetch(
         `https://server-fitbuddy.onrender.com/user/excercise/${_id}`,
-        { method: "DELETE" }
+        {
+          method: "DELETE",
+          headers: {
+            authentication: `Bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "application/json",
+          },
+        }
       );
-    //   window.location.reload();
+      //   window.location.reload();
     };
     tr.append(td1, td2, td3, td4);
     body.append(tr);

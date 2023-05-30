@@ -162,7 +162,25 @@ userRouter.get("/excercise", async (req, res) => {
   }
 });
 userRouter.delete("/excercise/:id", async (req, res) => {
-  console.log(req.params.id)
-  res.send({msg:"hello deleters"})
+  const {email} = req.body;
+  const {id} = req.params;
+  console.log(email,id)
+  try {
+    const user = await userModel.findOne({ email });
+    if (!user) {
+      return res.status(404).send({msg:"user not found"});
+    }
+    const item = user.excercises.id(id);
+    if (!item) {
+      return res.status(404).send("exercise not found");
+    }
+    user.excercises = user.excercises.filter((item) => item.id !== id);
+
+    await user.save();
+    res.send({msg:"item deleted from exercises"});
+  } catch (error) {
+    console.log(error);
+    res.status(404).send({msg:"item not deleted"});
+  }
 });
 module.exports = { userRouter };
