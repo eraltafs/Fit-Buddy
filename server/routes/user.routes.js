@@ -104,7 +104,7 @@ userRouter.get("/pro", async (req, res) => {
   }
 });
 userRouter.post("/excercise", async (req, res) => {
-  const user_ID = req.body.id;
+  const user_ID = req.body._id;
   const date = new Date();
   const isoDate = date.toISOString();
   req.body.date = isoDate;
