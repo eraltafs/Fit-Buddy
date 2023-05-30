@@ -42,27 +42,32 @@ function Append(data) {
         calories = document.getElementById("calories").value;
       };
       document.getElementById("AddExercise").onclick = async () => {
-        let send = { title, calories, minute };
-        let res = await fetch(
-          `https://server-fitbuddy.onrender.com/user/6474d03465e890eecd95cd89/excercise`,
-          {
-            method: "POST",
-            body: JSON.stringify(send),
-            headers: {
-              "Content-Type": "application/json",
-            },
+        try {
+          
+          let send = { title, calories, minute };
+          let res = await fetch(
+            `https://server-fitbuddy.onrender.com/user/6474d03465e890eecd95cd89/excercise`,
+            {
+              method: "POST",
+              body: JSON.stringify(send),
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          );
+          let jsonData = await res.json();
+          if (jsonData.msg === "item added to menu"){
+            alert("data updated")
+            location.reload()
           }
-        );
-        let jsonData = await res.json();
-        if (jsonData.msg === "item added to menu"){
-          alert("data updated")
-          location.reload()
+          else {
+            alert("something went wrong")
+  
+          }
+          document.getElementById("entry").style.display = "block";
+        } catch (error) {
+          console.log(error)
         }
-        else {
-          alert("something went wrong")
-
-        }
-        document.getElementById("entry").style.display = "block";
       };
     };
     container.append(p);
