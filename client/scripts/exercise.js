@@ -54,7 +54,7 @@ let datefield = (document.getElementById("date").textContent = date);
 
 async function fetching() {
   let res = await fetch(
-    `http://localhost:8000/user/excercise?date=${yyyy}-${mm}-${dd}`,
+    `https://server-fitbuddy.onrender.com/user/excercise?date=${yyyy}-${mm}-${dd}`,
     {
       headers: {
         authentication: `Bearer ${localStorage.getItem("token")}`,
@@ -95,7 +95,7 @@ function Append(data) {
     td4.onclick = async () => {
         console.log(_id)
       let res = await fetch(
-        `http://localhost:8000/user/excercise/${_id}`,
+        `https://server-fitbuddy.onrender.com/user/excercise/${_id}`,
         { method: "DELETE" }
       );
     //   window.location.reload();
