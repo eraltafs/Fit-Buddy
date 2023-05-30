@@ -12,7 +12,12 @@ userDetails.innerText = username;
 document.getElementById("searchexerbtn").onclick = async () => {
   let search = document.getElementById("searchexerinp").value;
   let res = await fetch(
-    `https://server-fitbuddy.onrender.com/exercise?title=${search}`
+    `https://server-fitbuddy.onrender.com/exercise?title=${search}` ,{
+      headers: {
+        "authentication":`Bearer ${localStorage.getItem("token")}`,
+        "Content-Type": "application/json",
+      },
+    }
   );
   data = await res.json();
   Append(data);

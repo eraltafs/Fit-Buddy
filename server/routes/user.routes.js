@@ -126,9 +126,9 @@ userRouter.post("/excercise", async (req, res) => {
   }
 });
 userRouter.get("/excercise", async (req, res) => {
-  const { email } = req.query;
-  const { date } = req.body;
-  const desiredDate = new Date(date);
+  const { email } = req.body;
+  console.log(req.query)
+  const desiredDate = new Date(req.query.date);
 
   const user = await userModel.aggregate([
     { $match: { email } },
@@ -155,7 +155,7 @@ userRouter.get("/excercise", async (req, res) => {
       },
     },
   ]);
-
+console.log(user)
   if (user.length === 0) {
     return res.status(404).send({ message: "User not found" });
   }
