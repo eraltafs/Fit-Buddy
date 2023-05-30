@@ -2,6 +2,7 @@ const { Router } = require("express");
 const { userModel } = require("../models/user.model");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
+const { authentication } = require("../middleware/authenticate");
 const userRouter = Router();
 
 userRouter.get("/", async (req, res) => {
@@ -75,7 +76,7 @@ userRouter.post("/login", async (req, res) => {
     return res.status(500).send({ msg: "server error" });
   }
 });
-
+userRouter.use(authentication)
 userRouter.post("/:id/excercise", async (req, res) => {
   const user_ID = req.params.id;
   console.log(user_ID)

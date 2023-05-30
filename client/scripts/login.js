@@ -15,21 +15,25 @@ sign.onclick = () => {
   window.location.href = "welcome.html";
 };
 
-let userlcl = localStorage.getItem("user");
-let passlcl = localStorage.getItem("pass");
+document.getElementById("loginbtn").onclick = async () => {
+  let email = document.getElementById("user").value;
+  let password = document.getElementById("pass").value;
 
-document.getElementById("loginbtn").onclick = ()=>{
-    let user = document.getElementById("user").value
-    let pass = document.getElementById("pass").value
-   
-    if(userlcl==null&&passlcl==null){
-        alert("Please create account ")
+  if (email && password) {
+    let res = await fetch(`https://server-fitbuddy.onrender.com/user/login`, {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    let { token } = await res.json();
+    if (token) {
+      localStorage.setItem("token", token);
+      var decoded = jwt.verify(token, "hashedtoken");
+      console.log(decoded.foo);
     }
-   else if(user==userlcl&&passlcl==pass){
-
-        location.href = "homepage.html"
-    }else{
-        alert("Please enter correct credentials")
-    }
-
-}
+  } else {
+    alert("Please enter all credentials");
+  }
+};
