@@ -60,7 +60,7 @@ userRouter.post("/login", async (req, res) => {
     if (user?.email) {
       bcrypt.compare(password, user.password, async (err, result) => {
         if (result) {
-          const token = jwt.sign({ email: user.email }, process.env.jwtsec);
+          const token = jwt.sign({_id:user._id, email: user.email }, process.env.jwtsec);
           return res.send({ msg: "login success", token });
         } else {
           console.log(err);
