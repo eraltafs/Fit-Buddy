@@ -15,13 +15,17 @@ sign.onclick = () => {
   window.location.href = "welcome.html";
 };
 let button=document.getElementById("loginbtn")
+const spinner = document.getElementById('spinner');
 document.getElementById("loginbtn").onclick = async () => {
   let email = document.getElementById("user").value;
   let password = document.getElementById("pass").value;
 
   if (email && password) {
-    button.innerHTML = '<span class="loader"></span>Loading...';
-    button.disabled = true;
+    button.innerHTML=`<span id="spinner" class="spinner"></span>`
+    const spinner = document.getElementById('spinner');
+    button.disabled = true; // Disable the button
+    spinner.style.display = 'block'; // Show the spinner
+
     let res = await fetch(`https://server-fitbuddy.onrender.com/user/login`, {
       method: "POST",
       body: JSON.stringify({ email, password }),
@@ -29,8 +33,9 @@ document.getElementById("loginbtn").onclick = async () => {
         "Content-Type": "application/json",
       },
     });
-    button.innerHTML = 'LOG IN';
-      button.disabled = false;
+    button.disabled = false; // Re-enable the button
+    spinner.style.display = 'none'; // Hide the spinner
+    button.innerHTML=`LOG IN`
     let { token } = await res.json();
     if (token) {
         localStorage.setItem("token", token)
