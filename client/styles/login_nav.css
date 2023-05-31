@@ -178,6 +178,11 @@ select{
 a{
     text-decoration-line: none;
 }
+.loader {
+    margin-right: 10px;
+    color:#3498db
+  }
+  
 
 @media screen and (max-width: 570px) {
     #login{
