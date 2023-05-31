@@ -4,89 +4,18 @@ body {
 }
 a{
 	text-decoration:none;
-}
-#navtop {
-	display: flex;
-	height: 80px;
-	width: 70%;
-	margin: auto;
-	justify-content: space-between;
-	padding: 10px 10px 0px 10px;
-}
-#topleft {
-	width: 50%;
-	
-}
-#topleft img {
-	width: 40%;
-}
-#topright {
-	width: 70%;
-	display: flex;
-
-	justify-content: space-evenly;
-	align-items: center;
-}
-#topright p {
-  font-size: 14px;
-}
-#topright p:nth-child(3) {
-  color: grey;
-}
-#topright p:nth-child(4) {
-  color: red;
-}
-#topright p:nth-child(5) {
-  color: grey;
-}
-#topright p:nth-child(6) {
-  color: grey;
-}
-#topright p:nth-child(11) {
+  cursor: pointer;
   color: blue;
 }
-#topright p:nth-child(12) {
-  color: blue;
+button{
+	cursor: pointer;
 }
-#navmiddle {
-  margin-top: 10px;
-  width: 100%;
-  background-color: #0066ee;
-  height: 40px;
+.fa-caret-left, .fa-caret-right{
+  cursor:  pointer;
+  margin: 0px 10px;
+  color: yellow;
 }
-#navmiddle div {
-  display: flex;
-  margin-left: 14%;
-}
-#navmiddle > div a {
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 12px 18px;
-  text-decoration: none;
-}
-#navmiddle > div a:hover {
-  background-color: #00548b;
-  height: 20px;
-  padding: 12px 18px;
-}
-#navbottom {
-  width: 100%;
-  background-color: #00548b;
 
-  height: 40px;
-}
-#navbottom > div {
-  display: flex;
-  margin-left: 14%;
-}
-#navbottom div a {
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-  padding: 12px 18px;
-  text-decoration: none;
-}
 #firstcontainer {
   width: 50%;
   margin-left: 15%;
@@ -99,7 +28,7 @@ a{
 }
 
 #datefield {
-  background-color: #00548b;
+  background-color: #0074c1;
   color: white;
   padding: 3px 8px;
 }
@@ -177,35 +106,22 @@ button:hover{
     background-color: rgb(64, 144, 64);
     
 }
-#footer {
+footer {
 	width: 100%;
-	margin-top: 170px;
-	display: flex;
-	height: 100px;
+	margin-top: 15vh;
+	padding-top: 20px;
+	color: #0066ee;
+	height: 80px;
 	text-align: center;
 	background-color: #e0e0e0;
-	justify-content: space-between;
+	
 }
-#footer div:nth-child(1) {
-	width: 60%;
-	display: flex;
-	/* margin-left: 150px; */
+footer span{
+	cursor: pointer;
+}
+footer>p:first-child{
+	width: 80%;
 	margin: auto;
-	margin-top: 20px;
-	text-align: center;
-	justify-content: space-between;
-}
-#footer div:nth-child(1) p {
-	color: #0066ee;
-	font-size: 12px;
-}
-#footer div:nth-child(2) {
-	width: 15%;
-	margin-top: 30px;
-}
-#copyright {
-	text-align: center;
-	margin-top: -40px;
-	font-size: 12px;
-	color: grey;
+	display: flex;
+	justify-content: space-around;
 }

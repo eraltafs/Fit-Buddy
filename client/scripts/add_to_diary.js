@@ -1,25 +1,46 @@
-document.getElementById("navexeciseanch").style.backgroundColor = "#00548b";
+import getprofile from "./getprofile.js";
+import { navbar } from "../components/navbar.js";
+import { footer } from "../components/login_footer.js";
+
+let nav = document.querySelector("nav");
+let footer_sec = document.querySelector("footer");
+nav.innerHTML = navbar();
+footer_sec.innerHTML = footer();
+document.getElementById("navexerciseanch").style.backgroundColor = "#00548b";
 
 let userDetails = document.getElementById("username");
+let log_out = document.getElementById("log_out");
+let searchexerbtn = document.getElementById("searchexerbtn");
+let token = localStorage.getItem("token");
 userDetails.innerText = null;
 
-let username = localStorage.getItem("user");
-if (username === undefined) {
+if (!token) {
   window.location = "login.html";
+} else {
+  window.onload = async () => {
+    let jsondata = await getprofile();
+    const { email } = jsondata;
+    userDetails.innerText = email;
+  };
 }
-userDetails.innerText = username;
 
-document.getElementById("searchexerbtn").onclick = async () => {
+log_out.onclick = () => {
+  localStorage.removeItem("token");
+  location.reload();
+};
+
+searchexerbtn.onclick = async () => {
   let search = document.getElementById("searchexerinp").value;
   let res = await fetch(
-    `https://server-fitbuddy.onrender.com/exercise?title=${search}` ,{
+    `https://server-fitbuddy.onrender.com/exercise?title=${search}`,
+    {
       headers: {
-        "authentication":`Bearer ${localStorage.getItem("token")}`,
+        authentication: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
     }
   );
-  data = await res.json();
+  let data = await res.json();
   Append(data);
 };
 let slectedexer = document.getElementById("slectedexer");
@@ -48,7 +69,6 @@ function Append(data) {
       };
       document.getElementById("AddExercise").onclick = async () => {
         try {
-          
           let send = { title, calories, minute };
           let res = await fetch(
             `https://server-fitbuddy.onrender.com/user/excercise`,
@@ -56,23 +76,21 @@ function Append(data) {
               method: "POST",
               body: JSON.stringify(send),
               headers: {
-                "authentication":`Bearer ${localStorage.getItem("token")}`,
+                authentication: `Bearer ${token}`,
                 "Content-Type": "application/json",
               },
             }
           );
           let jsonData = await res.json();
-          if (jsonData.msg === "item added to menu"){
-            alert("data updated")
-            location.reload()
-          }
-          else {
-            alert("something went wrong")
-  
+          if (jsonData.msg === "item added to menu") {
+            alert("data updated");
+            location.reload();
+          } else {
+            alert("something went wrong");
           }
           document.getElementById("entry").style.display = "block";
         } catch (error) {
-          console.log(error)
+          console.log(error);
         }
       };
     };
