@@ -13,11 +13,15 @@ log.style.display = "none";
 let log1 = document.getElementById("line");
 log1.style.display = "none";
 
+let button=document.getElementById("loginbutton")
+
 document.getElementById("loginbutton").onclick = async () => {
   let email = document.getElementById("user").value;
   let password = document.getElementById("pass").value;
 
   if (user && email) {
+    button.innerHTML = '<span class="loader"></span>Loading...';
+    button.disabled = true;
     let res = await fetch(
       `https://server-fitbuddy.onrender.com/user/register`,
       {
@@ -28,6 +32,8 @@ document.getElementById("loginbutton").onclick = async () => {
         },
       }
     );
+    button.innerHTML = 'Continue';
+      button.disabled = false;
     let jsondata = await res.json()
     if(jsondata.msg==="user created"){
         alert("signup success login now")
