@@ -7,6 +7,7 @@ let footer_sec = document.querySelector("footer");
 let decreament = document.querySelector(".fa-caret-left");
 let increament = document.querySelector(".fa-caret-right");
 let body = document.getElementById("exercisebody");
+let no_data_message = document.getElementById("message");
 
 nav.innerHTML = navbar();
 footer_sec.innerHTML = footer();
@@ -78,7 +79,7 @@ function updateDate() {
   monthn = monthNames[today.getMonth()];
   date = `${dayn}, ${monthn} ${dd}, ${yyyy}`;
   document.getElementById("date").textContent = date;
-  fetching()
+  fetching();
 }
 
 increament.onclick = () => {
@@ -132,37 +133,43 @@ async function fetching() {
 }
 fetching();
 function Append(data) {
-  body.innerHTML = null
-  data.forEach(({ _id, calories, title, minute }) => {
-    let tr = document.createElement("tr");
-    let td1 = document.createElement("td");
-    td1.textContent = title;
-    let td2 = document.createElement("td");
-    td2.textContent = minute;
-    let td3 = document.createElement("td");
-    td3.textContent = calories;
+  if (data.length == 0) {
+    no_data_message.textContent = `You have no data for ${date}`;
+    no_data_message.style.color = "red"
+  } else {
+    no_data_message.style.display = "none"
+    body.innerHTML = null;
+    data.forEach(({ _id, calories, title, minute }) => {
+      let tr = document.createElement("tr");
+      let td1 = document.createElement("td");
+      td1.textContent = title;
+      let td2 = document.createElement("td");
+      td2.textContent = minute;
+      let td3 = document.createElement("td");
+      td3.textContent = calories;
 
-    let td4 = document.createElement("td");
-    td4.innerHTML = `<i class="fa-solid fa-circle-minus"></i>`;
-    td4.style.color = "red";
-    td4.style.cursor = "pointer";
-    td4.onclick = async () => {
-      console.log(_id);
-      let res = await fetch(
-        `https://server-fitbuddy.onrender.com/user/excercise/${_id}`,
-        {
-          method: "DELETE",
-          headers: {
-            authentication: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
+      let td4 = document.createElement("td");
+      td4.innerHTML = `<i class="fa-solid fa-circle-minus"></i>`;
+      td4.style.color = "red";
+      td4.style.cursor = "pointer";
+      td4.onclick = async () => {
+        console.log(_id);
+        let res = await fetch(
+          `https://server-fitbuddy.onrender.com/user/excercise/${_id}`,
+          {
+            method: "DELETE",
+            headers: {
+              authentication: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        if (res.ok) {
+          window.location.reload();
         }
-      );
-      if (res.ok) {
-        window.location.reload();
-      }
-    };
-    tr.append(td1, td2, td3, td4);
-    body.append(tr);
-  });
+      };
+      tr.append(td1, td2, td3, td4);
+      body.append(tr);
+    });
+  }
 }
