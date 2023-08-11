@@ -4,14 +4,14 @@ import { loginNav } from "../components/login_nav.js";
 let footer_div = document.getElementById("footer");
 let login_div = document.getElementById("nav");
 let signup = document.getElementById("sign");
+let button = document.getElementById("loginbtn");
 
 footer_div.innerHTML = footer();
 login_div.innerHTML = loginNav();
 
 signup.onclick = () => {
-  window.location.href = "welcome.html";
+  window.location.href = "signup.html";
 };
-let button = document.getElementById("loginbtn");
 
 button.onclick = async () => {
   let email = document.getElementById("user").value;
