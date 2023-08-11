@@ -1,8 +1,12 @@
 import { loginNav } from "../components/login_nav.js";
+import { footer } from "../components/login_footer.js";
 
 let login_div = document.getElementById("nav");
+let footerdiv = document.querySelector("footer")
+
 
 login_div.innerHTML = loginNav();
+footerdiv.innerHTML = footer()
 
 let log = document.getElementById("signUp");
 log.style.display = "none";
