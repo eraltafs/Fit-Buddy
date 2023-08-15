@@ -77,6 +77,8 @@
   #hamburger-icon {
     display: block;
     padding-left: 8%;
+    width: 120%;
+    background-color: #0066ee;
   }
 
   #hamburger-menu {
@@ -86,21 +88,21 @@
     position: absolute;
     top: 150px;
     left: 10;
-}
-#hamburger-menu a {
-	width: 100%;
-	padding-left: 20%;
-}
+  }
+  #hamburger-menu a {
+    width: 100%;
+    padding-left: 20%;
+  }
 
-#hamburger-menu a:hover {
-	background-color: #00548b;
-}
+  #hamburger-menu a:hover {
+    background-color: #00548b;
+  }
 
-#hamburger-icon.active,
-#hamburger-menu.active {
-	display: flex;
-	width: 120%;
-	background-color: #0066ee;
+  #hamburger-icon.active,
+  #hamburger-menu.active {
+    display: flex;
+    width: 120%;
+    background-color: #0066ee;
   }
 }
 
