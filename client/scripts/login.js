@@ -1,12 +1,13 @@
 import { footer } from "../components/login_footer.js";
 import { loginNav } from "../components/login_nav.js";
 
-let footer_div = document.getElementById("footer");
+let footer_sec = document.querySelector("footer");
 let login_div = document.getElementById("nav");
 let signup = document.getElementById("sign");
 let button = document.getElementById("loginbtn");
 
-footer_div.innerHTML = footer();
+
+footer_sec.innerHTML = footer();
 login_div.innerHTML = loginNav();
 
 signup.onclick = () => {

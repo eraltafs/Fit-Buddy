@@ -10,29 +10,15 @@
   <body>
     <div id="nav"></div>
     <div id="username">
-      <div>
-        <h1>Create your account.</h1>
-        <input
-          type="email"
-          placeholder="Email address"
-          id="user"
-          required
-        /><br />
-        <input
-          type="password"
-          placeholder="Create a password"
-          id="pass"
-          required
-        />
+      <h1>Create your account.</h1>
+      <form>
+        <input type="email" placeholder="Email address" id="user" required/>
+        <input type="password" placeholder="Create a password" id="pass" required/>
         <p>Must be at least 6 characters, no spaces.</p>
-      </div>
-      <div id="continue">
         <button id="loginbutton">CONTINUE</button>
-      </div>
+      </form>
     </div>
-    <footer>
-        
-    </footer>
+    <footer></footer>
   </body>
 </html>
 <script type="module" src="./scripts/signup.js"></script>

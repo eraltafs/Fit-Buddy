@@ -3,13 +3,7 @@ function footer() {
   <div>
   <div id="left_container">
     <span>Calorie Counter </span>
-    <span>Blog</span>
-    <span>Terms & Privacy </span>
     <span>Contact Us </span>
-    <span>Api </span>
-    <span>Jobs</span>
-    <span>Feedback</span>
-    <span>Ad Cookies</span>
     <span>Do Not Sell My Personal Information</span>
   </div>
   <div id="right_container">

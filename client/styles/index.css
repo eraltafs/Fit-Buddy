@@ -253,19 +253,19 @@ footer {
   width: 100%;
   margin-top: 15vh;
   padding-top: 20px;
+  padding-bottom: 20px;
   color: #0066ee;
-  height: 80px;
+  height: fit-content;
   text-align: center;
   background-color: #e0e0e0;
 }
 footer span {
   cursor: pointer;
-}
-footer > p:first-child {
-  width: 80%;
-  margin: auto;
+ }
+footer #left_container {
+  width: 90%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 @media screen and (max-width: 560px) {
@@ -416,6 +416,8 @@ footer > p:first-child {
   footer #left_container{
     display: flex;
     flex-direction: column;
+    justify-content: left;
+    text-align: left;
   }
   footer #right_container{
     display: flex;
@@ -566,6 +568,8 @@ footer > p:first-child {
   footer #left_container{
     display: flex;
     flex-direction: column;
+    text-align: left;
+    padding-left: 10px;
   }
   footer #right_container{
     display: flex;
