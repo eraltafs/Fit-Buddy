@@ -33,6 +33,14 @@ if (!token) {
     userDetails.innerText = email;
   };
 }
+const hamburgerIcon = document.getElementById("hamburger-icon");
+const hamburgerMenu = document.getElementById("hamburger-menu");
+
+hamburgerIcon.addEventListener("click", () => {
+  hamburgerIcon.classList.toggle("active");
+  hamburgerMenu.classList.toggle("active");
+});
+
 const today = new Date();
 let yyyy = today.getFullYear();
 let dd = today.getDate();
