@@ -7,12 +7,9 @@ a {
   cursor: pointer;
   color: blue;
 }
-
 #mainbody {
   width: 70%;
   margin: auto;
-  /* border: 1px solid red; */
-  height: 200px;
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
@@ -22,11 +19,10 @@ a {
   width: 100%;
 }
 #mainheader {
-  width: 98%;
+  padding-right: 10px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  /* border: 1px solid blue; */
-  height: 45px;
   background-color: #00548b;
   color: white;
 }
@@ -36,23 +32,10 @@ a {
 #mainheader_right {
   display: flex;
   justify-content: space-between;
-}
-#mainheader_right {
-  width: 10%;
-  /* border: 1px solid green; */
-  margin-right: 10px;
+  align-items: center;
 }
 #mainheader_right div p {
   font-size: 12px;
-}
-#mainheader_right div p + p {
-  margin-top: -5px;
-}
-#sidecolumn {
-  width: 28%;
-  /* border: 1px solid purple; */
-  height: 200px;
-  background-color: white;
 }
 #image {
   width: 120px;
@@ -243,7 +226,7 @@ button {
 }
 footer {
   width: 100%;
-  margin-top: 100vh;
+  margin-top: 2vh;
   padding-top: 20px;
   padding-bottom: 20px;
   color: #0066ee;
@@ -266,4 +249,8 @@ select {
 }
 
 
-
+@media screen and (min-width: 571px) and (max-width: 900px) {
+  #mainbody {
+    width: 90%;
+  }
+}

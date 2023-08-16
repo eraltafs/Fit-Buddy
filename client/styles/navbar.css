@@ -1,5 +1,7 @@
 /* Top Navigation */
-
+* {
+  overflow-x: hidden;
+}
 #navtop {
   display: flex;
   height: 80px;
@@ -68,12 +70,22 @@
 @media screen and (max-width: 571px) {
   #navtop {
     width: 90%;
+    height: max-content;
   }
 
   #topleft img {
-    max-width: 80px;
+    max-width: 50%;
   }
-
+  #topright {
+    width: 50%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    height: max-content;
+  }
+  #topright p:first-child {
+    display: none;
+  }
   #hamburger-icon {
     display: block;
     padding-left: 8%;
@@ -86,7 +98,7 @@
     flex-direction: column;
     background-color: #0066ee;
     position: absolute;
-    top: 150px;
+    top: 144px;
     left: 10;
   }
   #hamburger-menu a {
@@ -101,17 +113,16 @@
   #hamburger-icon.active,
   #hamburger-menu.active {
     display: flex;
-    width: 120%;
     background-color: #0066ee;
   }
 }
 
-@media screen and (min-width: 572px) and (max-width: 900px) {
+@media screen and (min-width: 571px) and (max-width: 900px) {
   #navtop {
     width: 90%;
   }
 
   #topleft img {
-    max-width: 60px;
+    max-width: 50%;
   }
 }
