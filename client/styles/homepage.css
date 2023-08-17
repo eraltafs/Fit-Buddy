@@ -188,7 +188,7 @@ select {
     flex-direction: column;
   }
   #image{
-    width: 90%;
+    width: 80%;
   }
   #calories div {
     flex-direction: column;
@@ -215,6 +215,9 @@ select {
   }
   #verify{
     flex-direction: column;
+  }
+  #verify div h3 {
+    text-align: center;
   }
   footer {
     background-color: #e0e0e0;
