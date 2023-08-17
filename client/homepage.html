@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Fit-Buddy</title>
     <link rel="stylesheet" href="./styles/homepage.css" />
     <link rel="stylesheet" href="./styles/navbar.css" />
+    <script
+      src="https://kit.fontawesome.com/add05b7e25.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -31,95 +35,65 @@
             </div>
           </div>
         </div>
-        <div id="profileImage">
+        <div id="profileSummary">
           <div id="image">
-            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="" srcset="">
+            <img
+              id="profileImage"
+              src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+              alt=""
+              srcset=""
+            />
             <button>Upload photo</button>
-            <div id="display">
-              <div>
-                <h1>0</h1>
-                <p>lbs</p>
-                <p>LOST</p>
-              </div>
-              <div>
-                <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
-                  <path
-                    fill="currentColor"
-                    d="M12,3A4,4 0 0,1 16,7C16,7.73 15.81,8.41 15.46,9H18C18.95,9 19.75,9.67 19.95,10.56C21.96,18.57 22,18.78 22,19A2,2 0 0,1 20,21H4A2,2 0 0,1 2,19C2,18.78 2.04,18.57 4.05,10.56C4.25,9.67 5.05,9 6,9H8.54C8.19,8.41 8,7.73 8,7A4,4 0 0,1 12,3M12,5A2,2 0 0,0 10,7A2,2 0 0,0 12,9A2,2 0 0,0 14,7A2,2 0 0,0 12,5Z"
-                  />
-                </svg>
-              </div>
-            </div>
           </div>
-          <div>
+          <div id="caloriesSummary">
             <p>Calories Remaining</p>
-
             <div id="calories">
-              <h1>2100</h1>
-              <button id="add_exercise">Add Exercise</button>
-              <button>Add Food</button>
+              <div>
+                <h1>2100</h1>
+                <button id="add_exercise">Add Exercise</button>
+                <button>Add Food</button>
+              </div>
             </div>
             <hr />
             <div id="formula">
               <div>
-                <p>2100</p>
                 <p>GOAL</p>
+                <p id="goal">2100</p>
               </div>
               <hr />
               <div>
-                <p>0</p>
                 <p>FOOD</p>
+                <p id="intake">0</p>
               </div>
               <div>
+                <p>&nbsp;</p>
                 <p>-</p>
               </div>
               <div>
-                <p>0</p>
                 <p>EXERCISE</p>
+                <p id="Burn">0</p>
               </div>
               <div>
+                <p>&nbsp;</p>
                 <p>=</p>
               </div>
               <div>
-                <p>0</p>
                 <p>NET</p>
+                <p>0</p>
               </div>
             </div>
             <div id="slider">
-              <span id="tooltiptext">Remaining 2100</span>
-
               <hr />
-            </div>
-            <div id="pointer">
-              <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
-                <path
-                  fill="currentColor"
-                  d="M11,10H13V16H11V10M22,12H19V20H5V12H2L12,3L22,12M15,10A2,2 0 0,0 13,8H11A2,2 0 0,0 9,10V16A2,2 0 0,0 11,18H13A2,2 0 0,0 15,16V10Z"
-                />
-              </svg>
             </div>
           </div>
         </div>
         <div id="verify">
           <div>
-            <svg viewBox="0 0 24 24">
-              <path
-                fill="currentColor"
-                d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
-              />
-            </svg>
-          </div>
-          <div>
-            <h3>Don't forget to verify your email.</h3>
-            <p>We sent an email to:</p>
-            <p id="username1"></p>
+            <h3>verify your email.</h3>
+            <p>We sent an email to: <span id="username1"></span></p>
           </div>
           <div>
             <button>RESEND EMAIL</button>
-            <p>
-              Or,change your <br />
-              email address
-            </p>
           </div>
         </div>
 
@@ -129,15 +103,7 @@
             Lose up to 3x more with the support of friends, than those who diet
             alone.
           </p>
-          <button>
-            <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
-              <path
-                fill="currentColor"
-                d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"
-              />
-            </svg>
-            Invite By Email
-          </button>
+          <button><a href=""><i class="fa-solid fa-envelope"></i> Invite By Email</a></button>
         </div>
         <div id="comments"></div>
       </div>

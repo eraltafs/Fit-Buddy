@@ -37,171 +37,106 @@ a {
 #mainheader_right div p {
   font-size: 12px;
 }
+
+#profileSummary {
+  display: flex;
+  background-color: #f6f6f6;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+#profileImage {
+  width: 100%;
+}
 #image {
-  width: 120px;
-  height: 120px;
-  border: 1px solid;
+  text-align: center;
+  width: 20%;
   background-color: #e6e6e6;
   margin: 10px;
   padding: 10px;
+  height: max-content;
+  border: 1px solid;
 }
-#image p {
-  color: grey;
-}
-#image button {
+button {
   border: none;
-  color: blue;
-  margin-top: 30px;
-  background-color: #e6e6e6;
+  color: rgb(255, 255, 255);
+  background-color: #6c5757;
+  padding: 5px 10px;
+  border-radius: 6px;
+  overflow-x: visible;
+  text-align: center;
 }
-#display {
+button:hover {
+  background-color: grey;
+}
+#caloriesSummary {
+  width: 80%;
+  padding: 10px;
+}
+#caloriesSummary > p {
+  margin: 0px;
+  padding: 0px;
+}
+#calories div {
   display: flex;
-  justify-content: space-between;
-}
-#display div:nth-child(1) {
-  width: 60%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-#display div:nth-child(1) h1 {
+  gap: 10px;
+  align-items: center;
+  justify-content: space-evenly;
   color: #85c400;
-  margin-top: -1px;
+  height: max-content;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
 }
-#display div:nth-child(1) p + p {
-  margin-top: -15px;
+h1 {
+  margin: 0px;
+  padding: 0px;
 }
-#display div:nth-child(2) {
-  width: 30%;
-  color: grey;
-  margin-top: 20px;
-  margin-left: 20px;
-}
-#profileImage div:nth-child(2) {
-  width: 85%;
-  /* border: 1px solid red; */
-}
-#profileImage {
-  display: flex;
-  /* border: 1px solid red; */
-  background-color: #f6f6f6;
-}
-#calories {
-  display: flex;
-  margin: -30px 0px 0px 20px;
-}
-#calories h1 {
-  color: #85c400;
-}
-#calories button {
-  width: 30%;
-  height: 30px;
-  margin: 25px 0px 0px 10px;
-  background-color: white;
-  border: 1px solid grey;
-  border-radius: 5px;
-  color: grey;
-}
-#calories h1 + button {
-  margin-left: 100px;
-}
-#profileImage hr {
-  margin-top: -15px;
-}
+
 #formula {
   display: flex;
   justify-content: space-between;
-  color: grey;
 }
 #formula div {
   width: 20%;
 }
-#formula div p:nth-child(1) {
-  font-size: 25px;
-  margin-top: -1px;
-}
-#formula div p:nth-child(2) {
-  margin-top: -15px;
+#formula div p:first-child {
   font-size: 12px;
+  margin: 0px;
+  padding: 0px;
+}
+#formula div p:last-child {
+  font-size: 25px;
+  margin: 0px;
+  padding: 0px;
 }
 #formula hr {
   height: 50px;
   margin-top: 5px;
   margin-right: 10px;
 }
-#slider {
-  position: relative;
-  cursor: pointer;
-}
-#tooltiptext {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  background-color: #85c400;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 7px;
-  visibility: hidden;
-}
-#slider:hover #tooltiptext {
-  top: -130%;
-  visibility: visible;
-}
-#tooltiptext::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 100%;
-  transform: translateX(-50%);
-  border: 15px solid;
-  border-color: #85c400;
-}
-#slider hr {
-  margin-top: 20px;
-  height: 15px;
-  width: 90%;
-  color: grey;
-  background-color: #e6e6e6;
-  margin-left: -5px;
-}
-#pointer svg {
-  color: #85c400;
-  margin-left: -15px;
-  margin-top: -8px;
-}
 #verify {
   display: flex;
-  background-color: #fffcf8;
+  justify-content: space-around;
   border: 1px solid #fcdab0;
   margin-top: 10px;
+  padding: 10px;
 }
-#verify div:nth-child(1) {
-  width: 15%;
-}
-#verify div:nth-child(1) svg {
-  width: 80px;
-  margin: 10px 0px 0px 20px;
-  color: #666666;
-}
-#verify div:nth-child(2) {
-  width: 50%;
+
+#verify :last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #verify div h3 {
   color: #0a5282;
+  margin: 0px;
+  padding: 0px;
 }
-#verify div:nth-child(3) button {
-  color: white;
-  background-color: #0066ee;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  margin: 20px 0px 0px 50px;
-}
-#verify div:nth-child(3) button ~ p {
-  margin-left: 50px;
-  text-align: center;
+p {
+  margin: 0px;
+  padding: 0px;
 }
 
 #invite {
@@ -216,13 +151,11 @@ a {
   font-weight: bold;
   font-size: 20px;
 }
-#invite button {
-  padding: 10px;
-  width: 30%;
-  text-align: center;
-}
-button {
-  cursor: pointer;
+#invite a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 footer {
   width: 100%;
@@ -247,7 +180,66 @@ span:hover {
 select {
   width: 100px;
 }
+@media screen and (max-width: 571px) {
+  #mainbody {
+    width: 90%;
+  }
+  #profileSummary {
+    flex-direction: column;
+  }
+  #image{
+    width: 90%;
+  }
+  #calories div {
+    flex-direction: column;
+  }
+  #caloriesSummary > p {
+    text-align: center;
+  }
+  #formula {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
+  #formula div {
+    width: 100% !important;
+    text-align: center;
+  }
+  #formula hr {
+    display: none;
+  }
+  #formula div:nth-child(4),
+  #formula div:nth-child(6) {
+    display: none;
+  }
+  #verify{
+    flex-direction: column;
+  }
+  footer {
+    background-color: #e0e0e0;
+    height: fit-content;
+  }
+  footer > div {
+    display: flex;
+    padding: 10px;
+    /* flex-direction: column; */
+  }
+  footer #left_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+  }
+  footer #right_container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+  footer #languages {
+    width: 80%;
+  }
+}
 
 @media screen and (min-width: 571px) and (max-width: 900px) {
   #mainbody {

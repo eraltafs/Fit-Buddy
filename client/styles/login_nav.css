@@ -152,7 +152,7 @@ select {
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 571px) {
   #login {
     width: 95%;
     margin-top: 10%;
