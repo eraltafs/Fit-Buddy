@@ -1,6 +1,6 @@
-body {
-	margin: 0px;
-	padding: 0px;
+h3{
+  margin: 0px;
+  padding: 0px;
 }
 a{
 	text-decoration:none;
@@ -10,6 +10,13 @@ a{
 button{
 	cursor: pointer;
 }
+#diary{
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .fa-caret-left, .fa-caret-right{
   cursor:  pointer;
   margin: 0px 10px;
@@ -17,8 +24,9 @@ button{
 }
 
 #firstcontainer {
-  width: 50%;
-  margin-left: 15%;
+  margin: auto;
+  margin-top: 10px;
+  width: 80%;
 }
 #addData > h3 {
   margin: 0px;
@@ -37,11 +45,9 @@ hr {
   color: grey;
   background-color: rgb(180, 179, 179);
 }
-/* #firstcontainer>div:nth-child(3){
-    display: flex;
-    justify-content: space-between;
-
-} */
+table{
+  width: 100%;
+}
 table th {
   background-color: #00548b;
   color: rgb(255, 255, 255);
@@ -84,12 +90,7 @@ table thead tr td:first-child {
 .goal {
   color: #00548b;
 }
-.sapace {
-  padding-left: 200px;
-}
-table tr td {
-  padding: 0px 20px;
-}
+
 
 button{
     margin-top: 10px;
@@ -124,4 +125,66 @@ footer>p:first-child{
 	margin: auto;
 	display: flex;
 	justify-content: space-around;
+}
+@media screen and (min-width: 571px) and (max-width: 900px) {
+  #firstcontainer {
+    width: 90%;
+  }
+  table thead tr td:first-child{
+    padding-right: 130px;
+  }
+  footer {
+    background-color: #e0e0e0;
+    height: fit-content;
+  }
+  footer > div {
+    display: flex;
+    padding: 10px;
+    /* flex-direction: column; */
+  }
+  footer #left_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+  }
+  footer #right_container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+  footer #languages {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  table thead tr td:first-child{
+    padding-right: 0px;
+  }
+  #diary{
+    display: block
+  }
+  footer {
+    background-color: #e0e0e0;
+    height: fit-content;
+  }
+  footer > div {
+    display: flex;
+    padding: 10px;
+    /* flex-direction: column; */
+  }
+  footer #left_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+  }
+  footer #right_container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+  footer #languages {
+    width: 80%;
+  }
 }

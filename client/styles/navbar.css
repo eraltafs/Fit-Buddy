@@ -1,11 +1,15 @@
 /* Top Navigation */
+body {
+	margin: 0px;
+	padding: 0px;
+}
 * {
   overflow-x: hidden;
 }
 #navtop {
   display: flex;
   height: 80px;
-  width: 70%;
+  width: 80%;
   margin: auto;
   justify-content: space-between;
   padding: 10px;
@@ -97,7 +101,7 @@
     flex-direction: column;
     background-color: #0066ee;
     position: absolute;
-    top: 100px;
+    top: 130px;
     left: 10;
   }
   #hamburger-menu a {
@@ -147,7 +151,7 @@
     flex-direction: column;
     background-color: #0066ee;
     position: absolute;
-    top: 115px;
+    top: 130px;
     left: 10;
   }
   #hamburger-menu a {

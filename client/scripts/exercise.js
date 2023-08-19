@@ -79,17 +79,6 @@ let monthn = monthNames[today.getMonth()];
 let date = `${dayn}, ${monthn} ${dd}, ${yyyy}`;
 document.getElementById("date").textContent = date;
 
-function updateDate() {
-  today.setDate(dd);
-  today.setMonth(mm - 1);
-  today.setFullYear(yyyy);
-  dayn = dayNames[today.getDay()];
-  monthn = monthNames[today.getMonth()];
-  date = `${dayn}, ${monthn} ${dd}, ${yyyy}`;
-  document.getElementById("date").textContent = date;
-  fetching();
-}
-
 increament.onclick = () => {
   dd++;
   if (dd > new Date(yyyy, mm, 0).getDate()) {
@@ -113,8 +102,20 @@ decreament.onclick = () => {
     }
     dd = new Date(yyyy, mm, 0).getDate();
   }
+
   updateDate();
 };
+
+function updateDate() {
+  today.setDate(dd);
+  today.setMonth(mm - 1);
+  today.setFullYear(yyyy);
+  dayn = dayNames[today.getDay()];
+  monthn = monthNames[today.getMonth()];
+  date = `${dayn}, ${monthn} ${dd}, ${yyyy}`;
+  document.getElementById("date").textContent = date;
+  fetching();
+}
 
 async function fetching() {
   let res = await fetch(
@@ -141,13 +142,14 @@ async function fetching() {
 }
 fetching();
 function Append(data) {
-  if (data.length == 0) {
+  body.innerHTML = null;
+  if (data.length === 0) {
+    no_data_message.style.display = "block";
     no_data_message.textContent = `You have no data for ${date}`;
-    no_data_message.style.color = "red"
+    no_data_message.style.color = "red";
   } else {
-    no_data_message.style.display = "none"
-    body.innerHTML = null;
-    data.forEach(({ _id, calories, title, minute }) => {
+    no_data_message.style.display = "none";
+    data.forEach(({ _id, calories, title, minute },i) => {
       let tr = document.createElement("tr");
       let td1 = document.createElement("td");
       td1.textContent = title;
@@ -161,7 +163,7 @@ function Append(data) {
       td4.style.color = "red";
       td4.style.cursor = "pointer";
       td4.onclick = async () => {
-        console.log(_id);
+        console.log(_id,i);
         let res = await fetch(
           `https://server-fitbuddy.onrender.com/user/excercise/${_id}`,
           {
@@ -173,7 +175,10 @@ function Append(data) {
           }
         );
         if (res.ok) {
-          window.location.reload();
+          alert("Exercise deleted")
+          data.splice(i,1)
+          Append(data)
+        //   // window.location.reload();
         }
       };
       tr.append(td1, td2, td3, td4);
