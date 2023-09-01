@@ -42,7 +42,7 @@
         </tbody>
       </table>
 
-      <a href="/add_to_diary.html">Add Exercise</a> |
+      <a id="addExercise">Add Exercise</a>
 
       <hr />
       <table>
@@ -81,6 +81,20 @@
         </tbody>
       </table>
       <a href="">Add Exercise</a>
+    </div>
+    <!-- pop up -->
+    <div id="datafetcher">
+      <button id="closeButton">X</button>
+      <select id="selectExercise"></select>
+      <p>
+        <label for="duration">Minutes</label>
+        <input type="number" id="duration" required />
+      </p>
+      <p>
+        <label for="calories">Calories Burned:</label>
+        <input type="number" id="calories" required />
+      </p>
+      <button id="AddExercise">Add Exercise</button>
     </div>
 
     <footer></footer>

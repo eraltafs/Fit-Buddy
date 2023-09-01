@@ -92,24 +92,63 @@ table thead tr td:first-child {
 }
 
 
-button{
-    margin-top: 10px;
-    background-color: rgb(98,196,98);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 1px 10px;
-    position: absolute;
-    left: 32%;
-    transform: translate(-50);
+button {
+  
+  background-color: rgb(98, 196, 98);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 3px 8px;
+  position: absolute;
+  cursor: pointer;
 }
+
 button:hover{
     background-color: rgb(64, 144, 64);
     
 }
+
+#closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: max-content;
+}
+
+
+#datafetcher {
+  display: none;
+  padding: 20px;
+  width: 40%;
+  margin: auto;
+  height: 150px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+#datafetcher input {
+  display: block;
+  width: 95%;
+}
+#datafetcher p {
+  display: block;
+  width: 95%;
+  margin: 10px 0px;
+
+  padding: 0px;
+}
+#datafetcher button {
+  display: block;
+  margin: 0px;
+}
+
 footer {
 	width: 100%;
-	margin-top: 15vh;
+	margin-top: 21vh;
 	padding-top: 20px;
 	color: #0066ee;
 	height: 80px;
@@ -136,6 +175,7 @@ footer>p:first-child{
   footer {
     background-color: #e0e0e0;
     height: fit-content;
+    margin-top: 14vh;
   }
   footer > div {
     display: flex;
@@ -164,9 +204,13 @@ footer>p:first-child{
   #diary{
     display: block
   }
+  #datafetcher {
+    width: 60%;
+  }
   footer {
     background-color: #e0e0e0;
     height: fit-content;
+    margin-top: 6vh;
   }
   footer > div {
     display: flex;
