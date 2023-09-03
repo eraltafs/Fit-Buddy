@@ -6,6 +6,12 @@ body {
 * {
   overflow-x: hidden;
 }
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
 #navtop {
   display: flex;
   height: 80px;
@@ -86,9 +92,7 @@ body {
     text-align: center;
     height: max-content;
   }
-  #topright p:first-child {
-    display: none;
-  }
+  
   #hamburger-icon {
     display: block;
     padding-left: 8%;
@@ -101,7 +105,7 @@ body {
     flex-direction: column;
     background-color: #0066ee;
     position: absolute;
-    top: 130px;
+    top: 90px;
     left: 10;
   }
   #hamburger-menu a {
@@ -136,9 +140,7 @@ body {
     text-align: center;
     height: max-content;
   }
-  #topright p:first-child {
-    display: none;
-  }
+ 
   #hamburger-icon {
     display: block;
     padding-left: 8%;
@@ -151,7 +153,7 @@ body {
     flex-direction: column;
     background-color: #0066ee;
     position: absolute;
-    top: 130px;
+    top: 110px;
     left: 10;
   }
   #hamburger-menu a {

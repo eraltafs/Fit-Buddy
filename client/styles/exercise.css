@@ -13,8 +13,9 @@ button{
 #diary{
   display: flex;
   gap: 10px;
-  justify-content: space-between;
-  align-items: center;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;;
 }
 
 .fa-caret-left, .fa-caret-right{
@@ -148,7 +149,7 @@ button:hover{
 
 footer {
 	width: 100%;
-	margin-top: 21vh;
+	margin-top: 25vh;
 	padding-top: 20px;
 	color: #0066ee;
 	height: 80px;
@@ -165,7 +166,7 @@ footer>p:first-child{
 	display: flex;
 	justify-content: space-around;
 }
-@media screen and (min-width: 571px) and (max-width: 900px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
   #firstcontainer {
     width: 90%;
   }
@@ -175,7 +176,7 @@ footer>p:first-child{
   footer {
     background-color: #e0e0e0;
     height: fit-content;
-    margin-top: 14vh;
+    margin-top: 22.5vh;
   }
   footer > div {
     display: flex;
@@ -201,16 +202,17 @@ footer>p:first-child{
   table thead tr td:first-child{
     padding-right: 0px;
   }
-  #diary{
-    display: block
-  }
+
   #datafetcher {
     width: 60%;
+  }
+  #diary{
+    font-size: 14px;
   }
   footer {
     background-color: #e0e0e0;
     height: fit-content;
-    margin-top: 6vh;
+    margin-top: 22.5vh;
   }
   footer > div {
     display: flex;

@@ -49,6 +49,7 @@ a {
   width: 100%;
 }
 #image {
+  border-radius: 10px;
   text-align: center;
   width: 20%;
   background-color: #e6e6e6;
@@ -73,10 +74,7 @@ button:hover {
   width: 80%;
   padding: 10px;
 }
-#caloriesSummary > p {
-  margin: 0px;
-  padding: 0px;
-}
+
 #calories div {
   display: flex;
   gap: 10px;
@@ -188,7 +186,7 @@ select {
     flex-direction: column;
   }
   #image{
-    width: 80%;
+    width: 40%;
   }
   #calories div {
     flex-direction: column;

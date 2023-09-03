@@ -6,7 +6,6 @@ const navbar = () => {
   </a>
   </div>
   <div id="topright">
-      <p>Hi,</p>
       <p id="username"></p>
       <p> <a id="log_out"> Log Out</a></p>
   </div>
