@@ -1,29 +1,33 @@
+// Import necessary modules and components
 import getprofile from "./getprofile.js";
 import { navbar } from "../components/navbar.js";
 import { footer } from "../components/login_footer.js";
 
+// DOM elements
 let nav = document.querySelector("nav");
 let footer_sec = document.querySelector("footer");
 let decreament = document.querySelector(".fa-caret-left");
 let increament = document.querySelector(".fa-caret-right");
 let CardioBody = document.getElementById("CardioBody");
 let StrengthBody = document.getElementById("StrengthBody");
-
 let no_data_cardio = document.getElementById("messageCardio");
 let no_data_strength = document.getElementById("messageStrength");
 
+// Initialize and set up the navbar and footer
 nav.innerHTML = navbar();
 footer_sec.innerHTML = footer();
 
+// Set background color for the navigation menu item
 document.getElementById("navexerciseanch").style.backgroundColor = "#00548b";
 
+// Handle logout
 let log_out = document.getElementById("log_out");
-
 log_out.onclick = () => {
   localStorage.removeItem("token");
   location.reload();
 };
 
+// Get user details from local storage or redirect to login page
 let userDetails = document.getElementById("username");
 userDetails.innerText = null;
 let token = localStorage.getItem("token");
@@ -38,6 +42,8 @@ if (!token) {
     fetchingStrength();
   };
 }
+
+// Mobile menu toggle
 const hamburgerIcon = document.getElementById("hamburger-icon");
 const hamburgerMenu = document.getElementById("hamburger-menu");
 
@@ -46,6 +52,7 @@ hamburgerIcon.addEventListener("click", () => {
   hamburgerMenu.classList.toggle("active");
 });
 
+// Display the current date
 const today = new Date();
 let yyyy = today.getFullYear();
 let dd = today.getDate();
@@ -84,6 +91,7 @@ let monthn = monthNames[today.getMonth()];
 let date = `${dayn}, ${monthn} ${dd}, ${yyyy}`;
 document.getElementById("date").textContent = date;
 
+// Handle date increment and decrement
 increament.onclick = () => {
   dd++;
   if (dd > new Date(yyyy, mm, 0).getDate()) {
@@ -107,7 +115,6 @@ decreament.onclick = () => {
     }
     dd = new Date(yyyy, mm, 0).getDate();
   }
-
   updateDate();
 };
 
@@ -123,6 +130,7 @@ function updateDate() {
   fetchingStrength();
 }
 
+// Fetch cardio data for the selected date
 async function fetchingCardio() {
   let res = await fetch(
     `https://server-fitbuddy.onrender.com/user/cardio?date=${yyyy}-${mm}-${dd}`,
@@ -147,6 +155,7 @@ async function fetchingCardio() {
     `${totalcalories}` || "0";
 }
 
+// Fetch strength data for the selected date
 async function fetchingStrength() {
   let res = await fetch(
     `https://server-fitbuddy.onrender.com/user/strength?date=${yyyy}-${mm}-${dd}`,
@@ -161,11 +170,12 @@ async function fetchingStrength() {
   AppendStrength(data);
 }
 
+// Append cardio data to the table
 function AppendCardio(data) {
   CardioBody.innerHTML = null;
   if (data.length === 0) {
     no_data_cardio.style.display = "block";
-    no_data_cardio.textContent = `You have no cardio excercise for ${date}`;
+    no_data_cardio.textContent = `You have no cardio exercise for ${date}`;
     no_data_cardio.style.color = "red";
   } else {
     no_data_cardio.style.display = "none";
@@ -197,7 +207,6 @@ function AppendCardio(data) {
           alert("Exercise deleted");
           data.splice(i, 1);
           AppendCardio(data);
-          //   // window.location.reload();
         }
       };
       tr.append(td1, td2, td3, td4);
@@ -206,12 +215,12 @@ function AppendCardio(data) {
   }
 }
 
+// Append strength data to the table
 function AppendStrength(data) {
-  console.log(data);
   StrengthBody.innerHTML = null;
   if (data.length === 0) {
     no_data_strength.style.display = "block";
-    no_data_strength.textContent = `You have no strength excercise for ${date}`;
+    no_data_strength.textContent = `You have no strength exercise for ${date}`;
     no_data_strength.style.color = "red";
   } else {
     no_data_strength.style.display = "none";
@@ -243,7 +252,6 @@ function AppendStrength(data) {
           alert("Exercise deleted");
           data.splice(i, 1);
           AppendStrength(data);
-          //   // window.location.reload();
         }
       };
       tr.append(td1, td2, td3, td4);
@@ -252,32 +260,35 @@ function AppendStrength(data) {
   }
 }
 
+// Show the cardio exercise selection popup
 const addCardio = document.getElementById("addCardio");
 const addStrength = document.getElementById("addStrength");
-
 const cardioAdder = document.getElementById("cardioAdder");
 const strenthAdder = document.getElementById("strenthAdder");
-
 const closeButtonCardio = document.getElementById("closeButtonCardio");
 const closeButtonStrength = document.getElementById("closeButtonStrength");
-
 let selectCardio = document.getElementById("selectCardio");
 let selectSrength = document.getElementById("selectSrength");
 
+// Function to show cardio exercise selection
 function showCadio(data) {
   cardioAdder.style.display = "block";
   AppendCardioOptions(data);
 }
+
+// Function to show strength exercise selection
 function showStrength(data) {
   strenthAdder.style.display = "block";
   AppendStrengthOptions(data);
 }
+
 
 // Function to hide the popup
 function hidePopup(element) {
   element.style.display = "none";
 }
 
+// Event listeners for showing exercise selection popups
 addCardio.addEventListener("click", () => {
   let cardioArr = [
     "Running",
@@ -338,7 +349,8 @@ addStrength.addEventListener("click", () => {
   ];
   showStrength(strengthArr);
 });
-// Hide the popup when the close button is clicked
+
+// Event listeners for closing exercise selection popups
 closeButtonCardio.addEventListener("click", function (event) {
   hidePopup(cardioAdder);
 });
@@ -347,7 +359,7 @@ closeButtonStrength.addEventListener("click", function (event) {
   hidePopup(strenthAdder);
 });
 
-// Hide the popup when clicked outside of it or anywhere in the body
+// Event listener to close the popups when clicked outside
 document.addEventListener("click", function (event) {
   if (!cardioAdder.contains(event.target) && event.target !== addCardio) {
     hidePopup(cardioAdder);
@@ -357,6 +369,7 @@ document.addEventListener("click", function (event) {
   }
 });
 
+// Append cardio exercise options to the selection dropdown
 function AppendCardioOptions(data) {
   selectCardio.innerHTML = null;
   var durationInput = document.getElementById("duration");
@@ -385,7 +398,7 @@ function AppendCardioOptions(data) {
     document.getElementById("AddExercise").onclick = async () => {
       let title = selectedExercise;
       let send = { title, calories, minute };
-      console.log(send)
+      console.log(send);
       if (title && calories && minute) {
         try {
           let res = await fetch(
@@ -418,11 +431,12 @@ function AppendCardioOptions(data) {
   });
 }
 
+// Append strength exercise options to the selection dropdown
 function AppendStrengthOptions(data) {
   selectSrength.innerHTML = null;
   var setsInput = document.getElementById("sets");
   var weightInput = document.getElementById("weight");
-  var sets,weight, selectedStrength = data[0];
+  var sets, weight, selectedStrength = data[0];
 
   data.forEach((i) => {
     let opt = document.createElement("option");
@@ -442,7 +456,7 @@ function AppendStrengthOptions(data) {
     document.getElementById("AddStrength").onclick = async () => {
       let title = selectedStrength;
       let send = { title, sets, weight };
-      console.log(send)
+      console.log(send);
       if (title && sets && weight) {
         try {
           let res = await fetch(
