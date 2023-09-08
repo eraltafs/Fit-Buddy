@@ -24,7 +24,7 @@
           <i class="fa-solid fa-caret-right"></i>
         </h3>
       </div>
-      <p id="message"></p>
+      <p id="messageCardio"></p>
 
       <hr />
 
@@ -36,13 +36,12 @@
             <td>Cal.</td>
           </tr>
         </thead>
-        <tbody id="exercisebody">
+        <tbody id="CardioBody" class="tableBody">
           <!-- data will appended here -->
         </tbody>
       </table>
 
-      <a id="addExercise">Add Exercise</a>
-
+      <a id="addCardio">Add Exercise</a>
       <hr />
       <table>
         <tr>
@@ -50,7 +49,7 @@
             <span class="sapace"> Daily Total / </span>
             <span class="goal"> Goal </span>
           </td>
-
+          
           <td>
             <span id="totminute"> 15 </span>
             /
@@ -63,7 +62,8 @@
           </td>
         </tr>
       </table>
-
+      
+      <p id="messageStrength"></p>
       <hr />
 
       <table>
@@ -74,27 +74,40 @@
             <td>Weight</td>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="StrengthBody" class="tableBody">
           <!-- data will appended here -->
         </tbody>
       </table>
-      <a href="">Add Exercise</a>
+      <a id="addStrength">Add Exercise</a>
     </div>
     <!-- pop up -->
-    <div id="datafetcher">
-      <button id="closeButton">X</button>
-      <select id="selectExercise"></select>
+    <div id="cardioAdder" class="PopUpDiv">
+      <button id="closeButtonCardio">X</button>
+      <select id="selectCardio"></select>
       <p>
         <label for="duration">Minutes</label>
         <input type="number" id="duration" required />
       </p>
       <p>
-        <label for="calories">Calories Burned:</label>
+        <label for="calories">Calories Burned</label>
         <input type="number" id="calories" required />
       </p>
       <button id="AddExercise">Add Exercise</button>
     </div>
-
+    <!-- pop up -->
+    <div id="strenthAdder" class="PopUpDiv">
+      <button id="closeButtonStrength">X</button>
+      <select id="selectSrength"></select>
+      <p>
+        <label for="duration">Sets</label>
+        <input type="number" id="sets" required />
+      </p>
+      <p>
+        <label for="Weight">Weight</label>
+        <input type="number" id="weight" />
+      </p>
+      <button id="AddStrength">Add Exercise</button>
+    </div>
     <footer></footer>
   </body>
 </html>

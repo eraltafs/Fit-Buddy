@@ -71,21 +71,21 @@ table thead tr td:first-child {
   padding-left: 0px;
   color: #00548b;
 }
-#exercisebody{
+.tableBody{
   text-align: center;
 }
-#exercisebody tr>td:first-child{
+.tableBody tr>td:first-child{
   text-align: left;
   margin: 0px;
   padding: 0px;
 }
-#exercisebody tr:nth-child(odd){
+.tableBody tr:nth-child(odd){
   background-color: #637fa3;
 }
-#exercisebody tr:nth-child(even){
+.tableBody tr:nth-child(even){
   background-color: #b2cef1;
 }
-#exercisebody tr{
+.tableBody tr{
   text-transform: uppercase;
 }
 .goal {
@@ -109,7 +109,7 @@ button:hover{
     
 }
 
-#closeButton {
+#closeButtonCardio, #closeButtonStrength {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -117,7 +117,7 @@ button:hover{
 }
 
 
-#datafetcher {
+.PopUpDiv {
   display: none;
   padding: 20px;
   width: 40%;
@@ -131,18 +131,18 @@ button:hover{
   top: 50%;
   left: 50%;
 }
-#datafetcher input {
+.PopUpDiv input {
   display: block;
   width: 95%;
 }
-#datafetcher p {
+.PopUpDiv p {
   display: block;
   width: 95%;
   margin: 10px 0px;
 
   padding: 0px;
 }
-#datafetcher button {
+.PopUpDiv button {
   display: block;
   margin: 0px;
 }
@@ -203,7 +203,8 @@ footer>p:first-child{
     padding-right: 0px;
   }
 
-  #datafetcher {
+
+  .PopUpDiv {
     width: 60%;
   }
   #diary{
