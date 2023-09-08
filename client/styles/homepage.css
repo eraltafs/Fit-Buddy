@@ -155,6 +155,44 @@ p {
   align-items: center;
   color: white;
 }
+
+
+.PopUpDiv {
+  display: none;
+  padding: 20px;
+  width: 40%;
+  margin: auto;
+  height: max-content;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+.PopUpDiv input {
+  display: block;
+  width: 95%;
+}
+.PopUpDiv p {
+  display: block;
+  width: 95%;
+  margin: 10px 0px;
+
+  padding: 0px;
+}
+.PopUpDiv button {
+  display: block;
+  margin: 0px;
+}
+#closeButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: max-content;
+}
+
 footer {
   width: 100%;
   margin-top: 2vh;
@@ -179,6 +217,9 @@ select {
   width: 100px;
 }
 @media screen and (max-width: 571px) {
+  .PopUpDiv {
+    width: 60%;
+  }
   #mainbody {
     width: 90%;
   }

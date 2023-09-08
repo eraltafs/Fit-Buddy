@@ -43,7 +43,7 @@
               alt=""
               srcset=""
             />
-            <button>Upload photo</button>
+            <button id="uploadImage">Upload photo</button>
           </div>
           <div id="caloriesSummary">
             <p>Calories Remaining</p>
@@ -108,6 +108,16 @@
         <div id="comments"></div>
       </div>
     </div>
+
+    <div id="imageUpdater" class="PopUpDiv">
+      <button id="closeButton">X</button>
+      <p>
+        <label for="image">Image Link</label>
+        <input type="text" id="img" required />
+      </p>
+      <button id="AddImage">Add Image</button>
+    </div>
+
     <!-- footer section -->
     <footer></footer>
   </body>

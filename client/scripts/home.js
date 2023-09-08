@@ -13,18 +13,21 @@ let userDetails1 = document.getElementById("username1");
 let log_out = document.getElementById("log_out");
 
 let add_exercise = document.getElementById("add_exercise");
+let profileImage = document.getElementById("profileImage")
 
 userDetails.innerText = null;
 userDetails1.innerText = null;
-
-if (!localStorage.getItem("token")) {
+let token = localStorage.getItem("token")
+if (!token) {
   window.location = "login.html";
 } else {
   window.onload = async (event) => {
     let jsondata = await getprofile();
+    console.log(jsondata)
     const { email } = jsondata;
     userDetails.innerText = email;
     userDetails1.innerText = email;
+    profileImage.src = jsondata.img
   };
 }
 const hamburgerIcon = document.getElementById("hamburger-icon");
@@ -42,3 +45,56 @@ log_out.onclick = () => {
   localStorage.removeItem("token");
   location.reload();
 };
+let imageUpdater =  document.getElementById("imageUpdater")
+let uploadImage =document.getElementById("uploadImage")
+uploadImage.onclick = ()=>{
+ imageUpdater.style.display = "block"
+
+ let imgInput = document.getElementById("img")
+ let AddImage = document.getElementById("AddImage")
+ let img;
+ imgInput.oninput = ()=>{
+  img = imgInput.value
+ }
+
+ AddImage.onclick = async()=>{
+  console.log(img)
+  try {
+    let res = await fetch(
+      `https://server-fitbuddy.onrender.com/user/image`,
+      {
+        method: "POST",
+        body: JSON.stringify({img}),
+        headers: {
+          authentication: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    let jsonData = await res.json();
+    console.log(res)
+    if(jsonData.msg ==="image updated"){
+      alert("image updated")
+      window.reload()
+    }
+  } catch (error) {
+    console.log(error)
+  }
+ }
+}
+const closeButton = document.getElementById("closeButton");
+
+function hidePopup(element) {
+  element.style.display = "none";
+}
+
+
+closeButton.addEventListener("click", function (event) {
+  hidePopup(imageUpdater);
+});
+document.addEventListener("click", function (event) {
+  if (!imageUpdater.contains(event.target) && event.target !== uploadImage) {
+    hidePopup(imageUpdater);
+  }
+ 
+});

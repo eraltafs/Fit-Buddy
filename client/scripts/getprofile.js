@@ -5,6 +5,7 @@ const getprofile = async () => {
       "Content-Type": "application/json",
     },
   });
+  
   return await res.json();
 };
 export default getprofile
