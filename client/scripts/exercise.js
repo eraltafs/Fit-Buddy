@@ -397,6 +397,7 @@ function AppendCardioOptions(data) {
       calories = caloriesInput.value;
     };
     document.getElementById("AddExercise").onclick = async () => {
+      document.getElementById("AddExercise").disabled = true;
       let title = selectedExercise;
       let send = { title, calories, minute };
       console.log(send);
@@ -414,7 +415,11 @@ function AppendCardioOptions(data) {
             }
           );
           let jsonData = await res.json();
-          if (jsonData.msg === "item added to menu") {
+          document.getElementById("AddExercise").disabled = false;
+          durationInput.value =""
+          caloriesInput.value =""
+          console.log(jsonData)
+          if (jsonData.msg === "Cardio exercise added to the menu") {
             alertMsg("data updated","success");
             fetchingCardio();
           } else {
@@ -472,7 +477,8 @@ function AppendStrengthOptions(data) {
             }
           );
           let jsonData = await res.json();
-          if (jsonData.msg === "item added to menu") {
+          
+          if (jsonData.msg === "Strength exercise added to the menu") {
             alertMsg("data updated","success");
             fetchingStrength();
           } else {
