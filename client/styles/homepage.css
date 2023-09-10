@@ -194,28 +194,37 @@ p {
 }
 
 footer {
-  width: 100%;
-  margin-top: 2vh;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #0066ee;
-  height: fit-content;
-  text-align: center;
-  background-color: #e0e0e0;
+	width: 100%;
+	margin-top: 25vh;
+	padding: 10px;
+	color: #0066ee;
+	height: fit-content;
+	text-align: center;
+	background-color: #e0e0e0;
+	
 }
-footer span {
-  cursor: pointer;
-}
-footer #left_container {
+footer > div {
   display: flex;
-  justify-content: space-evenly;
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
 }
-span:hover {
-  cursor: pointer;
+#left_container{
+  display: flex;
+  column-gap: 20px;
 }
-select {
-  width: 100px;
+footer #right_container {
+  display: flex;
+  height: max-content;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
 }
+footer span{
+	cursor: pointer;
+}
+
 @media screen and (max-width: 571px) {
   .PopUpDiv {
     width: 60%;
@@ -259,32 +268,28 @@ select {
     text-align: center;
   }
   footer {
-    background-color: #e0e0e0;
-    height: fit-content;
-  }
-  footer > div {
-    display: flex;
-    padding: 10px;
-    /* flex-direction: column; */
+    margin-top: 22.5vh;
   }
   footer #left_container {
-    display: flex;
     flex-direction: column;
-    justify-content: left;
     text-align: left;
   }
-  footer #right_container {
-    display: flex;
-    margin: auto;
-    justify-content: center;
-  }
   footer #languages {
-    width: 80%;
+    width:100%;
   }
 }
 
 @media screen and (min-width: 571px) and (max-width: 900px) {
   #mainbody {
     width: 90%;
+  }
+  footer {
+    margin-top: 22.5vh;
+  }
+  footer > div {
+    width: 90%;
+  }
+  footer #languages {
+    width: 100%;
   }
 }

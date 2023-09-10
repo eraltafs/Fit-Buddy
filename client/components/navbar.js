@@ -13,7 +13,7 @@ const navbar = () => {
 <div id="navmiddle">
 <div id="hamburger-menu">
       <a href="./homepage.html" id="navhomeanch">MY HOME</a>
-      <a href="" id="navfoodanch">FOOD</a>
+      <a href="./food.html" id="navfoodanch">FOOD</a>
       <a href="./exercise.html" id="navexerciseanch">EXERCISE</a>
       <a href="">REPORTS</a>
       <a href="">PROFILE</a>

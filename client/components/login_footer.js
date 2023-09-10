@@ -2,9 +2,8 @@ function footer() {
   return `
   <div>
   <div id="left_container">
-    <span>Calorie Counter </span>
-    <span>Contact Us </span>
-    <span>Do Not Sell My Personal Information</span>
+    <span>Calorie-Counter </span>
+    <span>Contact-Us </span>
   </div>
   <div id="right_container">
     <select id="languages" name="languages">
@@ -118,9 +117,7 @@ function footer() {
     </select>
   </div>
 </div>
-<p id="copyright">© 2022 Fit Buddies, Inc.</p>
-
-  `;
+<p id="copyright">© 2022 Fit Buddies, Inc.</p>`;
 }
 
 export { footer };

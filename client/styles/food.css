@@ -1,25 +1,26 @@
-h3{
+h3 {
   margin: 0px;
   padding: 0px;
 }
-a{
-	text-decoration:none;
+a {
+  text-decoration: none;
   cursor: pointer;
   color: blue;
 }
-button{
-	cursor: pointer;
+button {
+  cursor: pointer;
 }
-#diary{
+#diary {
   display: flex;
   gap: 10px;
   font-size: 18px;
   justify-content: center;
-  align-items: center;;
+  align-items: center;
 }
 
-.fa-caret-left, .fa-caret-right{
-  cursor:  pointer;
+.fa-caret-left,
+.fa-caret-right {
+  cursor: pointer;
   margin: 0px 10px;
   color: yellow;
 }
@@ -46,7 +47,7 @@ hr {
   color: grey;
   background-color: rgb(180, 179, 179);
 }
-table{
+table {
   width: 100%;
 }
 table th {
@@ -71,30 +72,28 @@ table thead tr td:first-child {
   padding-left: 0px;
   color: #00548b;
 }
-.tableBody{
+.tableBody {
   text-align: center;
 }
-.tableBody tr>td:first-child{
+.tableBody tr > td:first-child {
   text-align: left;
   margin: 0px;
   padding: 0px;
 }
-.tableBody tr:nth-child(odd){
+.tableBody tr:nth-child(odd) {
   background-color: #637fa3;
 }
-.tableBody tr:nth-child(even){
+.tableBody tr:nth-child(even) {
   background-color: #b2cef1;
 }
-.tableBody tr{
+.tableBody tr {
   text-transform: uppercase;
 }
 .goal {
   color: #00548b;
 }
 
-
 button {
-  
   background-color: rgb(98, 196, 98);
   color: white;
   border: none;
@@ -104,18 +103,16 @@ button {
   cursor: pointer;
 }
 
-button:hover{
-    background-color: rgb(64, 144, 64);
-    
+button:hover {
+  background-color: rgb(64, 144, 64);
 }
 
-#closeButtonCardio, #closeButtonStrength {
+#closeButtonFood {
   position: absolute;
   top: 20px;
   right: 20px;
   width: max-content;
 }
-
 
 .PopUpDiv {
   display: none;
@@ -148,14 +145,13 @@ button:hover{
 }
 
 footer {
-	width: 100%;
-	margin-top: 25vh;
-	padding: 10px;
-	color: #0066ee;
-	height: fit-content;
-	text-align: center;
-	background-color: #e0e0e0;
-	
+  width: 100%;
+  margin-top: 25vh;
+  padding: 10px;
+  color: #0066ee;
+  height: fit-content;
+  text-align: center;
+  background-color: #e0e0e0;
 }
 footer > div {
   display: flex;
@@ -164,7 +160,7 @@ footer > div {
   margin: auto;
   justify-content: space-between;
 }
-#left_container{
+#left_container {
   display: flex;
   column-gap: 20px;
 }
@@ -175,14 +171,14 @@ footer #right_container {
   justify-content: center;
   width: 40%;
 }
-footer span{
-	cursor: pointer;
+footer span {
+  cursor: pointer;
 }
 @media screen and (min-width: 600px) and (max-width: 900px) {
   #firstcontainer {
     width: 95%;
   }
-  table thead tr td:first-child{
+  table thead tr td:first-child {
     padding-right: 130px;
   }
   footer {
@@ -199,15 +195,14 @@ footer span{
   #firstcontainer {
     width: 95%;
   }
-  table thead tr td:first-child{
+  table thead tr td:first-child {
     padding-right: 0px;
   }
-
 
   .PopUpDiv {
     width: 60%;
   }
-  #diary{
+  #diary {
     font-size: 14px;
   }
   footer {
@@ -218,7 +213,6 @@ footer span{
     text-align: left;
   }
   footer #languages {
-    width:100%;
-  };
-  
+    width: 100%;
+  }
 }
