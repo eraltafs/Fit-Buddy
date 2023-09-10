@@ -11,11 +11,20 @@ const userSchema = mongoose.Schema({
   weight: Number,
   goal_weight: Number,
   weekly_goal: String,
-  excercises: [
+  img: String,
+  cardio: [
     {
       title: String,
       calories: Number,
       minute: Number,
+      date: Date,
+    },
+  ],
+  strength:[
+    {
+      title: String,
+      weight: Number,
+      sets: Number,
       date: Date,
     },
   ],
