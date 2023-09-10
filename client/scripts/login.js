@@ -1,6 +1,6 @@
 import { footer } from "../components/login_footer.js";
 import { loginNav } from "../components/login_nav.js";
-
+import { alertMsg } from "./alert.message.js";
 let footer_sec = document.querySelector("footer");
 let login_div = document.getElementById("nav");
 let signup = document.getElementById("sign");
@@ -34,21 +34,25 @@ button.onclick = async () => {
     let data = await res.json()
     
     if(data.msg==="user not found"){
-      alert("wrong email or password")
+      alertMsg("wrong email or password","error")
     }else{
       let { token } = data;
       if (token) {
         localStorage.setItem("token", token);
-        location.href = "./homepage.html";
+        alertMsg("login success","success")
+        setTimeout(()=>{
+          location.href = "./homepage.html";
+        },5000)
+
       }
       else{
-        alert("something went wrong try again")
+        alertMsg("something went wrong try again","fail")
       }
     }
     button.disabled = false; // Re-enable the button
     spinner.style.display = "none"; // Hide the spinner
     button.innerHTML = `LOG IN`;
   } else {
-    alert("Please enter all credentials");
+    alertMsg("Please enter all credentials","error");
   }
 };

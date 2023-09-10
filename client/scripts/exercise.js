@@ -1,5 +1,6 @@
 // Import necessary modules and components
 import getprofile from "./getprofile.js";
+import { alertMsg } from "./alert.message.js";
 import { navbar } from "../components/navbar.js";
 import { footer } from "../components/login_footer.js";
 
@@ -204,7 +205,7 @@ function AppendCardio(data) {
           }
         );
         if (res.ok) {
-          alert("Exercise deleted");
+          alertMsg("Exercise deleted","success");
           data.splice(i, 1);
           AppendCardio(data);
         }
@@ -249,7 +250,7 @@ function AppendStrength(data) {
           }
         );
         if (res.ok) {
-          alert("Exercise deleted");
+          alertMsg("Exercise deleted","success");
           data.splice(i, 1);
           AppendStrength(data);
         }
@@ -414,16 +415,16 @@ function AppendCardioOptions(data) {
           );
           let jsonData = await res.json();
           if (jsonData.msg === "item added to menu") {
-            alert("data updated");
+            alertMsg("data updated","success");
             fetchingCardio();
           } else {
-            alert("something went wrong");
+            alertMsg("something went wrong","fail");
           }
         } catch (error) {
           console.log(error);
         }
       } else {
-        alert("please input all value");
+        alertMsg("please input all value","error");
       }
     };
 
@@ -472,16 +473,16 @@ function AppendStrengthOptions(data) {
           );
           let jsonData = await res.json();
           if (jsonData.msg === "item added to menu") {
-            alert("data updated");
+            alertMsg("data updated","success");
             fetchingStrength();
           } else {
-            alert("something went wrong");
+            alertMsg("something went wrong","fail");
           }
         } catch (error) {
           console.log(error);
         }
       } else {
-        alert("please input all value");
+        alertMsg("please input all value","error");
       }
     };
 

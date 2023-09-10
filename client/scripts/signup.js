@@ -1,6 +1,6 @@
 import { loginNav } from "../components/login_nav.js";
 import { footer } from "../components/login_footer.js";
-
+import { alertMsg } from "./alert.message.js";
 let login_div = document.getElementById("nav");
 let footerdiv = document.querySelector("footer")
 
@@ -12,13 +12,16 @@ let log = document.getElementById("signUp");
 log.style.display = "none";
 
 let button = document.getElementById("loginbutton");
-document.getElementById("loginbutton").onclick = async () => {
+button.onclick = async (event) => {
+  event.preventDefault();
   let email = document.getElementById("user").value;
   let password = document.getElementById("pass").value;
 
   if (email && password) {
-    if (password.trim().length < 6) {
-      alert("password Must be at least 6 characters")
+    let n = password.length
+    if (n < 6) {
+      console.log("password less 6")
+      alertMsg("password Must be at least 6 characters","error")
     } else {
       button.innerHTML = `<span id="spinner" class="spinner"></span>`;
       const spinner = document.getElementById("spinner");
@@ -38,17 +41,22 @@ document.getElementById("loginbutton").onclick = async () => {
       spinner.style.display = "none"; // Hide the spinner
       button.innerHTML = `Continue`;
       let jsondata = await res.json();
+      console.log(jsondata)
       if (jsondata.msg === "user created") {
-        alert("signup success login now");
-        location.href = "./login.html";
-      } else if (jsondata.msg === "user exists please login") {
-        alert("user exists please login");
-        location.href = "./login.html";
+        alertMsg("signup success login now", "success");
+        setTimeout(()=>{
+          location.href = "./login.html";
+        },5000)
+      } else if (jsondata.msg === "User already exists. Please login.") {
+        alertMsg("user exists please login", "error");
+        setTimeout(()=>{
+          location.href = "./login.html";
+        },5000)
       } else {
-        alert("something went wrong try again");
+        alertMsg("something went wrong try again", "fail");
       }
     }
   } else {
-    alert("Please enter all details!");
+    alertMsg("Please enter all details!","error");
   }
 };

@@ -1,4 +1,5 @@
 import getprofile from "./getprofile.js";
+import { alertMsg } from "./alert.message.js";
 import { navbar } from "../components/navbar.js";
 import { footer } from "../components/login_footer.js";
 let footer_sec = document.querySelector("footer");
@@ -74,11 +75,12 @@ uploadImage.onclick = ()=>{
     let jsonData = await res.json();
     console.log(res)
     if(jsonData.msg ==="image updated"){
-      alert("image updated")
+      alertMsg("image updated","success")
       window.reload()
     }
   } catch (error) {
-    console.log(error)
+    alertMsg(error.msg,"fail")
+    console.log(error.msg)
   }
  }
 }
