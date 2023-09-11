@@ -1,5 +1,5 @@
 // Import necessary modules and components
-import getprofile from "./getprofile.js";
+import {getprofile} from "./getprofile.js";
 import { alertMsg } from "./alert.message.js";
 import { navbar } from "../components/navbar.js";
 import { footer } from "../components/login_footer.js";

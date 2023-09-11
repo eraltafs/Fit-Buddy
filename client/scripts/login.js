@@ -32,8 +32,8 @@ button.onclick = async () => {
       },
     });
     let data = await res.json()
-    
-    if(data.msg==="user not found"){
+    console.log(data)
+    if(data.msg==="User not found"){
       alertMsg("wrong email or password","error")
     }else{
       let { token } = data;

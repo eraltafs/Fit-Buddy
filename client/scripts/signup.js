@@ -42,7 +42,7 @@ button.onclick = async (event) => {
       button.innerHTML = `Continue`;
       let jsondata = await res.json();
       console.log(jsondata)
-      if (jsondata.msg === "user created") {
+      if (jsondata.msg === "User created successfully.") {
         alertMsg("signup success login now", "success");
         setTimeout(()=>{
           location.href = "./login.html";
